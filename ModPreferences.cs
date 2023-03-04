@@ -43,6 +43,7 @@ namespace DebugMod
             SetupConfigCategories();
             SetupConfigPreferences();
             _preferences_main.SaveToFile();
+            _preferences_ism.SaveToFile();
         }
 
         /// <summary>
@@ -53,7 +54,7 @@ namespace DebugMod
             _preferences_main = MelonPreferences.CreateCategory("Main");
             _preferences_main.SetFilePath("UserData/DebugMod.cfg");
 
-            _preferences_ism = MelonPreferences.CreateCategory("Improved Screenshot Mode [F6]");
+            _preferences_ism = MelonPreferences.CreateCategory("Improved Screenshot Mode");
             _preferences_ism.SetFilePath("UserData/DebugMod.cfg");
         }
 
@@ -66,7 +67,7 @@ namespace DebugMod
         static void SetupMainCategory()
         {
             _preferences_main_disableFog = _preferences_main.CreateEntry<bool>("Disable Fog", false);
-            _preferences_main_invulnerability = _preferences_main.CreateEntry<bool>("Enable Invulerability Controls [I]", false);
+            _preferences_main_invulnerability = _preferences_main.CreateEntry<bool>("Enable Invulerability Controls", false);
         }
 
         //improved screenshot mode
