@@ -10,6 +10,7 @@ namespace DebugMod
     {
         //Main
         public static bool preferences_main_disableFog { get; private set; }
+        public static bool preferences_main_invulnerability { get; private set; }
         //Improved Screenshot Mode
         public static bool preferences_ism_enableIsm { get; private set; }
         public static bool preferences_ism_HidePlayer { get; private set; }
@@ -19,6 +20,7 @@ namespace DebugMod
 
         static MelonPreferences_Category _preferences_main;
         static MelonPreferences_Entry<bool> _preferences_main_disableFog;
+        static MelonPreferences_Entry<bool> _preferences_main_invulnerability;
 
 
         static MelonPreferences_Category _preferences_ism;
@@ -51,7 +53,7 @@ namespace DebugMod
             _preferences_main = MelonPreferences.CreateCategory("Main");
             _preferences_main.SetFilePath("UserData/DebugMod.cfg");
 
-            _preferences_ism = MelonPreferences.CreateCategory("Improved Screenshot Mode");
+            _preferences_ism = MelonPreferences.CreateCategory("Improved Screenshot Mode [F6]");
             _preferences_ism.SetFilePath("UserData/DebugMod.cfg");
         }
 
@@ -64,6 +66,7 @@ namespace DebugMod
         static void SetupMainCategory()
         {
             _preferences_main_disableFog = _preferences_main.CreateEntry<bool>("Disable Fog", false);
+            _preferences_main_invulnerability = _preferences_main.CreateEntry<bool>("Enable Invulerability Controls [I]", false);
         }
 
         //improved screenshot mode
@@ -108,6 +111,7 @@ namespace DebugMod
         {
             DebugConsole.Log("Loaded preferences:");
             DebugConsole.Log($"DebugMod.ModPreferences.preferences_main_disableFog: {preferences_main_disableFog}");
+            DebugConsole.Log($"DebugMod.ModPreferences.preferences_main_invulnerability: {preferences_main_invulnerability}");
             DebugConsole.Log($"DebugMod.ModPreferences.preferences_Ism_enableIsm: {preferences_ism_enableIsm}");
             DebugConsole.Log($"DebugMod.ModPreferences.preferences_Ism_HidePlayer: {preferences_ism_HidePlayer}");
             DebugConsole.Log($"DebugMod.ModPreferences_preferences_Ism_HideCursor: {preferences_ism_HideCursor}");

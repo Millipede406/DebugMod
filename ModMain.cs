@@ -8,6 +8,7 @@ namespace DebugMod
         public static ModMain Instance;
 
         bool improvedScreenshotMode;
+        bool invulnerability;
 
         public override void OnInitializeMelon()
         {
@@ -25,8 +26,7 @@ namespace DebugMod
         {
             base.OnUpdate();
 
-            #region Controls
-
+            //improved screenshot mode
             if (Input.GetKeyDown(KeyCode.F6) && ModPreferences.preferences_ism_enableIsm)
             {
                 improvedScreenshotMode = !improvedScreenshotMode;
@@ -39,18 +39,26 @@ namespace DebugMod
                 {
                     ImprovedScreenshotMode.DisableIsm();
                 }
+            } 
+            //invulnerability
+            if (ModPreferences.preferences_main_invulnerability)
+            {
+                if (Input.GetKeyDown(KeyCode.I))
+                {
+                    invulnerability = !invulnerability;
+                }
+
+                if (invulnerability)
+                {
+                    PatchQuest.Player.P1.GrantImmunity(1f);
+                    PatchQuest.Player.P2.GrantImmunity(1f);
+                }
             }
-            
-            #endregion
-
-            #region Checks
-
+            //disable fog
             if (ModPreferences.preferences_main_disableFog)
             {
                 DisableFog.Update();
             }
-
-            #endregion
 
         }    
         public static void DebugLog(string msg)
