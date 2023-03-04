@@ -62,8 +62,6 @@ namespace DebugMod
         {
             Il2CppSystem.Type gameobjType = Il2CppType.Of<GameObject>();
 
-            Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-
             foreach (UnityEngine.Object obj in Resources.FindObjectsOfTypeAll(Il2CppType.Of<UnityEngine.GameObject>()))
             {
                 DebugConsole.Log($"checking if {obj.name} is a Shot");
