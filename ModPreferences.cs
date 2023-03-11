@@ -94,6 +94,7 @@ namespace DebugMod
         static void StoreMainPreferences()
         {
             preferences_main_disableFog = _preferences_main_disableFog.Value;
+            preferences_main_invulnerability = _preferences_main_invulnerability.Value;
         }
 
         static void StoreIsmPreferences()
