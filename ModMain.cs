@@ -46,6 +46,14 @@ namespace DebugMod
                 if (Input.GetKeyDown(KeyCode.I))
                 {
                     invulnerability = !invulnerability;
+                    if (invulnerability)
+                    {
+                        DebugConsole.Log("Invulnerability Enabled");
+                    }
+                    else
+                    {
+                        DebugConsole.Log("Invulnerability Disabled");
+                    }
                 }
 
                 if (invulnerability)
