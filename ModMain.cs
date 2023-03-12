@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using MelonLoader;
+using UnityEngine;
 
 namespace DebugMod
 {
@@ -17,6 +18,8 @@ namespace DebugMod
             Instance = this;
 
             ModPreferences.LoadPreferences();
+
+            MelonEvents.OnGUI.Subscribe(DebugGUI, 100);
         }
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
@@ -73,5 +76,11 @@ namespace DebugMod
         {
             Instance.LoggerInstance.Msg(msg);
         }
+        public void DebugGUI()
+        {
+            GUI.Box(new Rect(0, 0, 300, 500), "Debug Menu");
+        }
+
+
     }
 }
