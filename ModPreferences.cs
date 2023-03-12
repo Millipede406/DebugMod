@@ -8,14 +8,7 @@ namespace DebugMod
     /// </summary>
     public static class ModPreferences
     {
-        //Main
-        public static bool preferences_main_disableFog { get; private set; }
-        public static bool preferences_main_invulnerability { get; private set; }
-        //Improved Screenshot Mode
-        public static bool preferences_ism_enableIsm { get; private set; }
-        public static bool preferences_ism_HidePlayer { get; private set; }
-        public static bool preferences_ism_HideCursor { get; private set; }
-        public static bool preferences_ism_HideShots { get; private set; }
+        
 
 
         static MelonPreferences_Category _preferences_main;
