@@ -12,11 +12,13 @@ namespace DebugMod
         bool invulnerability;
         bool ismSettings;
 
-        public static bool ism_hidePlayer;
-        public static bool ism_hideCursor;
-        public static bool ism_hideShots;
+        public static bool ism_hidePlayer = true;
+        public static bool ism_hideCursor = true;
+        public static bool ism_hideShots = false;
 
-        public static bool DebugGUI_isActive;
+        public static bool hideFog = false;
+
+        public static bool DebugGUI_isActive = true;
 
         public override void OnInitializeMelon()
         {
@@ -44,7 +46,7 @@ namespace DebugMod
                 PatchQuest.Player.P1.GrantImmunity(1f);
                 PatchQuest.Player.P2.GrantImmunity(1f);
             }
-            if (ModPreferences.preferences_main_disableFog)
+            if (hideFog)
             {
                 DisableFog.Update();
             }
@@ -58,13 +60,15 @@ namespace DebugMod
         {
             if (!DebugGUI_isActive)
                 return;
-            GUI.Box(new Rect(0, 0, 300, 500), "Debug Menu");
+            GUI.Box(new Rect(0, 0, 300, 180), "Debug Menu");
             InvulnerabilityButton();
             ISMButton();
+            FogButton();
             if (ISMSettingsButton())
             {
                 ISMSettingsGUI();
             }
+            GUI.Label(new Rect(0, 150, 280, 20), "Press F6 to enable/disable this menu");
 
         }
 
@@ -150,6 +154,30 @@ namespace DebugMod
             ism_hideCursor = GUI.Toggle(new Rect(320, 60, 280, 20), ism_hideCursor, "Hide Cursor");
             ism_hideShots = GUI.Toggle(new Rect(320, 90, 280, 20), ism_hideShots, "Hide Shots* (Shots can still damage you)");
             GUI.Label(new Rect(320, 120, 280, 20), "*This option can cause lag");
+        }
+        public void FogButton()
+        {
+            string text;
+            if (hideFog)
+            {
+                text = "Enable Fog";
+            }
+            else
+            {
+                text = "Disable Fog";
+            }
+            if (GUI.Button(new Rect(10, 120, 280, 20), text))
+            {
+                hideFog = !hideFog;
+                if (hideFog)
+                {
+                    DebugConsole.Log("Fog Enabled");
+                }
+                else
+                {
+                    DebugConsole.Log("Fog Disabled");
+                }
+            }
         }
 
     }
