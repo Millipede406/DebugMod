@@ -16,6 +16,8 @@ namespace DebugMod
         public static bool ism_hideCursor;
         public static bool ism_hideShots;
 
+        public static bool DebugGUI_isActive;
+
         public override void OnInitializeMelon()
         {
             base.OnInitializeMelon();
@@ -34,37 +36,14 @@ namespace DebugMod
         {
             base.OnUpdate();
 
-            //improved screenshot mode
-            if (Input.GetKeyDown(KeyCode.F6) && ModPreferences.preferences_ism_enableIsm)
-            {
-                improvedScreenshotMode = !improvedScreenshotMode;
-
-                if (improvedScreenshotMode)
-                {
-                }
-                else
-                {
-                    ImprovedScreenshotMode.DisableIsm();
-                }
-            } 
-            //invulnerability
-            if (ModPreferences.preferences_main_invulnerability)
-            {
-                if (Input.GetKeyDown(KeyCode.I))
-                {
-                    
-                }
-
-                
-            }
+            if (Input.GetKeyDown(KeyCode.F6))
+                DebugGUI_isActive = !DebugGUI_isActive;
 
             if (invulnerability)
             {
                 PatchQuest.Player.P1.GrantImmunity(1f);
                 PatchQuest.Player.P2.GrantImmunity(1f);
             }
-
-            //disable fog
             if (ModPreferences.preferences_main_disableFog)
             {
                 DisableFog.Update();
@@ -77,6 +56,8 @@ namespace DebugMod
         }
         public void DebugGUI()
         {
+            if (!DebugGUI_isActive)
+                return;
             GUI.Box(new Rect(0, 0, 300, 500), "Debug Menu");
             InvulnerabilityButton();
             ISMButton();
