@@ -6,6 +6,7 @@ namespace DebugMod
     {
         public static void Update()
         {
+            DebugConsole.Log("disableFog");
             Darkness.Intensity = 0f;
         }
     }
