@@ -61,6 +61,10 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>A:\Program Files v2\Steam_Moment\steamapps\common\Patch Quest\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>A:\Program Files v2\Steam_Moment\steamapps\common\Patch Quest\MelonLoader\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>A:\Program Files v2\Steam_Moment\steamapps\common\Patch Quest\MelonLoader\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>

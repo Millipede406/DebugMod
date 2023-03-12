@@ -12,7 +12,7 @@ namespace DebugMod
 
         public static void EnableIsm()
         {
-            if (ModPreferences.preferences_ism_HidePlayer)
+            if (ModMain.ism_hidePlayer)
             {
                 if (GetPlayerReference())
                 {
@@ -20,7 +20,7 @@ namespace DebugMod
                 }
             }
 
-            if (ModPreferences.preferences_ism_HideCursor)
+            if (ModMain.ism_hideCursor)
             {
                 if (GetCursorReference())
                 {
@@ -28,7 +28,7 @@ namespace DebugMod
                 }
             }
 
-            if (ModPreferences.preferences_ism_HideShots)
+            if (ModMain.ism_hideShots)
             {
                 SetShots(true);
             }
@@ -36,7 +36,7 @@ namespace DebugMod
 
         public static void DisableIsm()
         {
-            if (ModPreferences.preferences_ism_HidePlayer)
+            if (ModMain.ism_hidePlayer)
             {
                 if (GetPlayerReference())
                 {
@@ -44,7 +44,7 @@ namespace DebugMod
                 }
             }
 
-            if (ModPreferences.preferences_ism_HideCursor)
+            if (ModMain.ism_hideCursor)
             {
                 if (GetCursorReference())
                 {
@@ -52,7 +52,7 @@ namespace DebugMod
                 }
             }
 
-            if (ModPreferences.preferences_ism_HideShots)
+            if (ModMain.ism_hideShots)
             {
                 SetShots(false);
             }
