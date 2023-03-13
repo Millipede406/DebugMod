@@ -66,16 +66,16 @@ namespace DebugMod
         {
             if (!DebugGUI_isActive)
                 return;
-            GUI.Box(new Rect(0, 0, 300, 180), "Debug Menu");
+            GUI.Box(new Rect(0, 0, 300, 150), "Debug Menu");
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
-            ISMButton(new Rect(10, 55, 280, 20));
-            if (ISMSettingsButton(new Rect(10, 80, 280, 20)))
+            ISMButton(new Rect(10, 55, 185, 20));
+            if (ISMSettingsButton(new Rect(200, 55, 90, 20)))
             {
                 ISMSettingsGUI();
             }
-            FogButton(new Rect(10, 105, 280, 20));
-            InfStaminaButton(new Rect(10, 130, 280, 20));
-            GUI.Label(new Rect(0, 150, 280, 20), "Press F6 to enable/disable this menu");
+            FogButton(new Rect(10, 80, 280, 20));
+            InfStaminaButton(new Rect(10, 105, 280, 20));
+            GUI.Label(new Rect(0, 130, 280, 20), "Press F6 to enable/disable this menu");
 
         }
 
@@ -108,11 +108,11 @@ namespace DebugMod
             string text;
             if (improvedScreenshotMode)
             {
-                text = "Disable Improved Screenshot Mode";
+                text = "Disable ISM";
             }
             else
             {
-                text = "Enable Improved Screenshot Mode";
+                text = "Enable ISM";
             }
             if (GUI.Button(r, text))
             {
