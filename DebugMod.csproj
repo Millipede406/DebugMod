@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="DisableFog.cs" />
     <Compile Include="ImprovedScreenshotMode.cs" />
+    <Compile Include="InfiniteDamage.cs" />
     <Compile Include="ModPreferences.cs" />
     <Compile Include="DebugConsole.cs" />
     <Compile Include="ModMain.cs" />

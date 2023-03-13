@@ -18,6 +18,7 @@ namespace DebugMod
 
         public static bool hideFog = false;
         public static bool infStamina = false;
+        public static bool infDamage = false;
 
         public static bool DebugGUI_isActive = true;
 
@@ -38,6 +39,7 @@ namespace DebugMod
         public override void OnUpdate()
         {
             base.OnUpdate();
+
 
             if (Input.GetKeyDown(KeyCode.F6))
                 DebugGUI_isActive = !DebugGUI_isActive;
@@ -66,7 +68,7 @@ namespace DebugMod
         {
             if (!DebugGUI_isActive)
                 return;
-            GUI.Box(new Rect(0, 0, 300, 150), "Debug Menu");
+            GUI.Box(new Rect(0, 0, 300, 180), "Debug Menu");
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
             ISMButton(new Rect(10, 55, 185, 20));
             if (ISMSettingsButton(new Rect(200, 55, 90, 20)))
@@ -75,7 +77,8 @@ namespace DebugMod
             }
             FogButton(new Rect(10, 80, 280, 20));
             InfStaminaButton(new Rect(10, 105, 280, 20));
-            GUI.Label(new Rect(0, 130, 280, 20), "Press F6 to enable/disable this menu");
+            InfDamageButton(new Rect(10, 130, 280, 20));
+            GUI.Label(new Rect(0, 155, 280, 20), "Press F6 to enable/disable this menu");
 
         }
 
@@ -201,6 +204,31 @@ namespace DebugMod
                 }
             }
         }
+        public void InfDamageButton(Rect r)
+        {
+            string text;
+            if (infDamage)
+            {
+                text = "Deactivate Infinite Damage";
+            }
+            else
+            {
+                text = "Activate Infinite Damage";
+            }
+            if (GUI.Button(r, text))
+            {
+                infDamage = !infDamage;
+                if (infStamina)
+                {
+                    DebugConsole.Log("Activating Infinite Damage");
+                }
+                else
+                {
+                    DebugConsole.Log("Deactivating Infinite Damage");
+                }
+            }
+        }
+
 
     }
 }
