@@ -68,7 +68,7 @@ namespace DebugMod
         {
             if (!DebugGUI_isActive)
                 return;
-            GUI.Box(new Rect(0, 0, 300, 180), "Debug Menu");
+            GUI.Box(new Rect(0, 0, 300, 205), "Debug Menu");
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
             ISMButton(new Rect(10, 55, 185, 20));
             if (ISMSettingsButton(new Rect(200, 55, 90, 20)))
@@ -78,7 +78,8 @@ namespace DebugMod
             FogButton(new Rect(10, 80, 280, 20));
             InfStaminaButton(new Rect(10, 105, 280, 20));
             InfDamageButton(new Rect(10, 130, 280, 20));
-            GUI.Label(new Rect(0, 155, 280, 20), "Press F6 to enable/disable this menu");
+            FastTravelButton(new Rect(10, 155, 280, 20));
+            GUI.Label(new Rect(0, 180, 280, 20), "Press F6 to enable/disable this menu");
 
         }
 
@@ -228,6 +229,15 @@ namespace DebugMod
                 }
             }
         }
+        public void FastTravelButton(Rect r)
+        {
+            if (GUI.Button(r, "Fast Travel"))
+            {
+                PatchQuest.Player.P1.SetBallooning(true);
+                DebugConsole.Log($"Activated Fast Travel");
+            }
+        }
+
 
 
     }
