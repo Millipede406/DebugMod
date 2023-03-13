@@ -17,6 +17,7 @@ namespace DebugMod
         public static bool ism_hideShots = false;
 
         public static bool hideFog = false;
+        public static bool infStamina = false;
 
         public static bool DebugGUI_isActive = true;
 
@@ -50,6 +51,11 @@ namespace DebugMod
             {
                 DisableFog.Update();
             }
+            if (infStamina)
+            {
+                PatchQuest.Player.P1.Stamina = int.MaxValue;
+                PatchQuest.Player.P2.Stamina = int.MaxValue;
+            }
 
         }    
         public static void DebugLog(string msg)
@@ -61,20 +67,21 @@ namespace DebugMod
             if (!DebugGUI_isActive)
                 return;
             GUI.Box(new Rect(0, 0, 300, 180), "Debug Menu");
-            InvulnerabilityButton();
-            ISMButton();
-            FogButton();
-            if (ISMSettingsButton())
+            InvulnerabilityButton(new Rect(10, 30, 280, 20));
+            ISMButton(new Rect(10, 55, 280, 20));
+            if (ISMSettingsButton(new Rect(10, 80, 280, 20)))
             {
                 ISMSettingsGUI();
             }
+            FogButton(new Rect(10, 105, 280, 20));
+            InfStaminaButton(new Rect(10, 130, 280, 20));
             GUI.Label(new Rect(0, 150, 280, 20), "Press F6 to enable/disable this menu");
 
         }
 
-        public void InvulnerabilityButton()
+        public void InvulnerabilityButton(Rect r)
         {
-            string invText = "";
+            string invText;
             if (invulnerability)
             {
                 invText = "Disable Invulnerability";
@@ -83,7 +90,7 @@ namespace DebugMod
             {
                 invText = "Enable Invulnerability";
             }
-            if (GUI.Button(new Rect(10, 30, 280, 20), invText))
+            if (GUI.Button(r, invText))
             {
                 invulnerability = !invulnerability;
                 if (invulnerability)
@@ -96,7 +103,7 @@ namespace DebugMod
                 }
             }
         }
-        public void ISMButton()
+        public void ISMButton(Rect r)
         {
             string text;
             if (improvedScreenshotMode)
@@ -107,7 +114,7 @@ namespace DebugMod
             {
                 text = "Enable Improved Screenshot Mode";
             }
-            if (GUI.Button(new Rect(10, 60, 280, 20), text))
+            if (GUI.Button(r, text))
             {
                 improvedScreenshotMode = !improvedScreenshotMode;
                 if (improvedScreenshotMode)
@@ -122,18 +129,9 @@ namespace DebugMod
                 }
             }
         }
-        public bool ISMSettingsButton()
+        public bool ISMSettingsButton(Rect r)
         {
-            string text;
-            if (ismSettings)
-            {
-                text = "Hide ISM Settings";
-            }
-            else
-            {
-                text = "Show ISM Settings";
-            }
-            if (GUI.Button(new Rect(10, 90, 280, 20), text))
+            if (GUI.Button(r, "Settings"))
             {
                 ismSettings = !ismSettings;
                 if (ismSettings)
@@ -155,7 +153,7 @@ namespace DebugMod
             ism_hideShots = GUI.Toggle(new Rect(320, 90, 280, 20), ism_hideShots, "Hide Shots* (Shots can still damage you)");
             GUI.Label(new Rect(320, 120, 280, 20), "*This option can cause lag");
         }
-        public void FogButton()
+        public void FogButton(Rect r)
         {
             string text;
             if (hideFog)
@@ -166,7 +164,7 @@ namespace DebugMod
             {
                 text = "Disable Fog";
             }
-            if (GUI.Button(new Rect(10, 120, 280, 20), text))
+            if (GUI.Button(r, text))
             {
                 hideFog = !hideFog;
                 if (hideFog)
@@ -176,6 +174,30 @@ namespace DebugMod
                 else
                 {
                     DebugConsole.Log("Fog Disabled");
+                }
+            }
+        }
+        public void InfStaminaButton(Rect r)
+        {
+            string text;
+            if (infStamina)
+            {
+                text = "Deactivate Infinite Stamina";
+            }
+            else
+            {
+                text = "Activate Infinite Stamina";
+            }
+            if (GUI.Button(r, text))
+            {
+                infStamina = !infStamina;
+                if (infStamina)
+                {
+                    DebugConsole.Log("Activating Infinite Stamina");
+                }
+                else
+                {
+                    DebugConsole.Log("Deactivating Infinite Stamina");
                 }
             }
         }
