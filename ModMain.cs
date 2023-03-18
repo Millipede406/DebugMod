@@ -39,7 +39,6 @@ namespace DebugMod
         }
         public override void MainUpdate()
         {
-            base.OnUpdate();
 
 
             if (Input.GetKeyDown(KeyCode.F6))
