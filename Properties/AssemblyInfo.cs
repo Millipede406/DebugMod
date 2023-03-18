@@ -38,4 +38,5 @@ using MelonLoader;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: MelonInfo(typeof(ModMain), "Debug Mod", "1.0.0", "Millimedia Games")]
+[assembly: MelonAdditionalDependencies("ModdingUtilities")]
 [assembly: MelonGame("Lychee Game Labs", "Patch Quest")]

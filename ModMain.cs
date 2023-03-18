@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using MelonLoader;
 using UnityEngine;
+using ModdingUtilities;
 
 namespace DebugMod
 {
-    public class ModMain : MelonMod
+    public class ModMain : PatchQuestMod
     {
         public static ModMain Instance;
 
@@ -36,7 +37,7 @@ namespace DebugMod
         {
             LoggerInstance.Msg($"Loaded Scene: {sceneName} ({buildIndex})");
         }
-        public override void OnUpdate()
+        public override void MainUpdate()
         {
             base.OnUpdate();
 
