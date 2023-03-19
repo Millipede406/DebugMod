@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using DebugMod;
@@ -34,9 +35,11 @@ using MelonLoader;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.1.2")]
+[assembly: AssemblyFileVersion("1.1.1.2")]
 
-[assembly: MelonInfo(typeof(ModMain), "Debug Mod", "1.0.0", "Millimedia Games")]
+[assembly: MelonInfo(typeof(ModMain), "Debug Mod", "1.1.1.2", "Millimedia Games")]
+[assembly: MelonColor(ConsoleColor.Green)]
+[assembly: MelonAuthorColor(ConsoleColor.Magenta)]
 [assembly: MelonAdditionalDependencies("ModdingUtilities")]
 [assembly: MelonGame("Lychee Game Labs", "Patch Quest")]
