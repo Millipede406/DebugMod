@@ -233,8 +233,15 @@ namespace DebugMod
         {
             if (GUI.Button(r, "Fast Travel"))
             {
-                PatchQuest.Player.P1.SetBallooning(true);
-                DebugConsole.Log($"Activated Fast Travel");
+                if(GameState == PatchQuest.GameState.QUESTING)
+                {
+                    PatchQuest.Player.P1.SetBallooning(true);
+                    DebugConsole.Log($"Activated Fast Travel");
+                }
+                else
+                {
+                    LoggerInstance.Error($"Can't set fast travel: Player isn't on a quest.");
+                }
             }
         }
 
