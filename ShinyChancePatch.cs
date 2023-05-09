@@ -15,7 +15,7 @@ namespace DebugMod
     {
         public static void Postfix(ref float __result)
         {
-            __result = int.MaxValue;
+            __result = float.MaxValue;
         }
     }
 }
