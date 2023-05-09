@@ -8,9 +8,8 @@ using HarmonyLib;
 
 namespace DebugMod
 {
-    [HarmonyPatch(typeof(ShinyChance))]
-    [HarmonyPatch(nameof(ShinyChance.BASE_SHINY_CHANCE))]
     [HarmonyPatch(MethodType.Getter)]
+    [HarmonyPatch(typeof(ShinyChance), "get_BASE_SHINY_CHANCE")]
     public static class ShinyChancePatch
     {
         public static void Postfix(ref float __result)
