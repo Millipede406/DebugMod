@@ -59,6 +59,8 @@ namespace DebugMod
                 PatchQuest.Player.P2.Stamina = int.MaxValue;
             }
 
+            PatchQuest.ShinyChance.BASE_SHINY_CHANCE = int.MaxValue;
+
         }    
         public static void DebugLog(string msg)
         {
