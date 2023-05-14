@@ -71,7 +71,7 @@ namespace DebugMod
         {
             if (!DebugGUI_isActive)
                 return;
-            GUI.Box(new Rect(0, 0, 325, 205), "Debug Menu");
+            GUI.Box(new Rect(0, 0, 300, 230), "Debug Menu");
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
             ISMButton(new Rect(10, 55, 185, 20));
             if (ISMSettingsButton(new Rect(200, 55, 90, 20)))
