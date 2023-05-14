@@ -14,7 +14,8 @@ namespace DebugMod
     {
         public static void Postfix(ref bool __result)
         {
-            __result = float.MaxValue;
+            if(ModMain.ShinyMode)
+                __result = true;
         }
     }
 }
