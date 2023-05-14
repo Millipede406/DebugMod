@@ -8,11 +8,11 @@ using HarmonyLib;
 
 namespace DebugMod
 {
-    [HarmonyPatch(MethodType.Getter)]
-    [HarmonyPatch(typeof(ShinyChance), "get_BASE_SHINY_CHANCE")]
+    [HarmonyPatch(MethodType.Normal)]
+    [HarmonyPatch(typeof(ShinyChance), nameof(ShinyChance.Roll))]
     public static class ShinyChancePatch
     {
-        public static void Postfix(ref float __result)
+        public static void Postfix(ref bool __result)
         {
             __result = float.MaxValue;
         }
