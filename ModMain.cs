@@ -20,6 +20,7 @@ namespace DebugMod
         public static bool hideFog = false;
         public static bool infStamina = false;
         public static bool infDamage = false;
+        public static bool ShinyMode = false;
 
         public static bool DebugGUI_isActive = true;
 
@@ -68,7 +69,12 @@ namespace DebugMod
         {
             if (!DebugGUI_isActive)
                 return;
-            GUI.Box(new Rect(0, 0, 300, 205), "Debug Menu");
+
+            Rect windowRect = new Rect(0, 0, 300, 230);
+            windowRect = GUI.Window(0, windowRect, (GUI.WindowFunction)DebugWindow, "Debug Menu");
+        }
+        void DebugWindow(int windowID)
+        {
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
             ISMButton(new Rect(10, 55, 185, 20));
             if (ISMSettingsButton(new Rect(200, 55, 90, 20)))
@@ -79,8 +85,8 @@ namespace DebugMod
             InfStaminaButton(new Rect(10, 105, 280, 20));
             InfDamageButton(new Rect(10, 130, 280, 20));
             FastTravelButton(new Rect(10, 155, 280, 20));
-            GUI.Label(new Rect(0, 180, 280, 20), "Press F6 to enable/disable this menu");
-
+            AllShinyButton(new Rect(10, 180, 280, 20));
+            GUI.Label(new Rect(0, 205, 280, 20), "Press F6 to enable/disable this menu");
         }
 
         public void InvulnerabilityButton(Rect r)
@@ -245,7 +251,22 @@ namespace DebugMod
             }
         }
 
-
+        public void AllShinyButton(Rect r)
+        {
+            string text;
+            if (!ShinyMode)
+            {
+                text = "Enable Shiny Mode";
+            }
+            else
+            {
+                text = "Disable Shiny Mode";
+            }
+            if (GUI.Button(r, text))
+            {
+                ShinyMode = !ShinyMode;
+            }
+        }
 
     }
 }
