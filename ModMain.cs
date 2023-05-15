@@ -24,6 +24,7 @@ namespace DebugMod
 
         public static bool DebugGUI_isActive = true;
 
+
         public override void OnInitializeMelon()
         {
             base.OnInitializeMelon();
@@ -60,7 +61,8 @@ namespace DebugMod
                 PatchQuest.Player.P2.Stamina = int.MaxValue;
             }
 
-        }    
+
+        }
         public static void DebugLog(string msg)
         {
             Instance.LoggerInstance.Msg(msg);
@@ -75,6 +77,8 @@ namespace DebugMod
         }
         void DebugWindow(int windowID)
         {
+            GUI.Box(new Rect(0, 0, 300, 230), "Debug Menu");
+
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
             ISMButton(new Rect(10, 55, 185, 20));
             if (ISMSettingsButton(new Rect(200, 55, 90, 20)))
@@ -250,7 +254,6 @@ namespace DebugMod
                 }
             }
         }
-
         public void AllShinyButton(Rect r)
         {
             string text;
@@ -262,11 +265,10 @@ namespace DebugMod
             {
                 text = "Disable Shiny Mode";
             }
-            if (GUI.Button(r, text))
+            if(GUI.Button(r, text))
             {
                 ShinyMode = !ShinyMode;
             }
         }
-
     }
 }
