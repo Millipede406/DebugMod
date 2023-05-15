@@ -77,7 +77,6 @@ namespace DebugMod
                 return;
 
             windowRect = GUI.Window(0, windowRect, (GUI.WindowFunction)DebugWindow, "Debug Menu");
-            DebugConsole.Log(windowRect.ToString());
         }
         void DebugWindow(int windowID)
         {
