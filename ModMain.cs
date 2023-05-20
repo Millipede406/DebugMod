@@ -36,7 +36,6 @@ namespace DebugMod
 
             ModPreferences.LoadPreferences();
 
-            MelonEvents.OnGUI.Subscribe(DebugGUI, 100);
             windowRect = new Rect(0, 0, 300, 230);
         }
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
@@ -70,6 +69,11 @@ namespace DebugMod
         public static void DebugLog(string msg)
         {
             Instance.LoggerInstance.Msg(msg);
+        }
+
+        public override void OnGUI()
+        {
+            DebugGUI();
         }
         public void DebugGUI()
         {
