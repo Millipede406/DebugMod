@@ -1,11 +1,8 @@
-﻿using UnityEngine;
-using MelonLoader;
-using UnityEngine.UI;
-using PatchQuest;
-using HarmonyLib;
-using ModdingUtilities;
-using DebugMod.Features.Tools.ISM;
+﻿using DebugMod.Features.Tools;
 using DebugMod.GUI;
+using MelonLoader;
+using ModdingUtilities;
+using UnityEngine;
 
 namespace DebugMod
 {
@@ -45,7 +42,7 @@ namespace DebugMod
             ModPreferences.LoadPreferences();
 
             InitializeDebugGUI();
-            
+
         }
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
@@ -132,7 +129,7 @@ namespace DebugMod
         }
         void DebugWindow(int windowID)
         {
-            
+
 
             /*
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
