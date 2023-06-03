@@ -97,6 +97,16 @@ namespace DebugMod
 
             DebugMenu.DrawMenu();
 
+            if (CheatsMenu.IsActive)
+            {
+                CheatsMenu.DrawMenu();
+            }
+
+            if (ToolsMenu.IsActive)
+            {
+                ToolsMenu.DrawMenu();
+            }
+
             // Debug Menu
             // Enable and disable the separate category windows
 
