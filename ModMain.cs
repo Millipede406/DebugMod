@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using MelonLoader;
 using UnityEngine;
+using PatchQuest;
+using HarmonyLib;
 using ModdingUtilities;
 
 namespace DebugMod
@@ -273,6 +275,17 @@ namespace DebugMod
             {
                 ShinyMode = !ShinyMode;
             }
+        }
+    }
+
+
+    [HarmonyPatch(MethodType.Normal)]
+    [HarmonyPatch(typeof(PlayerActions), nameof(PlayerActions.ActivateSkill))]
+    public class RemoveCooldownsPatchTest
+    {
+        public static void Prefix(ref float cooldown)
+        {
+            cooldown = 0f;
         }
     }
 }
