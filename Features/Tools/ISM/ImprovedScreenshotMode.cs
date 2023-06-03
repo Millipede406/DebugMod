@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnhollowerRuntimeLib;
 using UnityEngine.SceneManagement;
 
-namespace DebugMod
+namespace DebugMod.Features.Tools.ISM
 {
     public static class ImprovedScreenshotMode
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PatchQuest;
 using HarmonyLib;
 
-namespace DebugMod
+namespace DebugMod.Features.Cheats
 {
     [HarmonyPatch(MethodType.Normal)]
     [HarmonyPatch(typeof(ShinyChance), nameof(ShinyChance.Roll))]

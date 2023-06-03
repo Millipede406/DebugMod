@@ -1,7 +1,7 @@
 ﻿using PatchQuest;
 using HarmonyLib;
 
-namespace DebugMod
+namespace DebugMod.Features.Cheats
 {
     [HarmonyPatch(typeof(Scaling))]
     [HarmonyPatch(nameof(Scaling.BlasterDamageScale))]
