@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using MelonLoader;
-using UnityEngine;
+using UnityEngine.UI;
 using PatchQuest;
 using HarmonyLib;
 using ModdingUtilities;
@@ -11,6 +11,7 @@ namespace DebugMod
     public class ModMain : PatchQuestMod
     {
         public static ModMain Instance;
+
 
         bool improvedScreenshotMode;
         bool invulnerability;
@@ -93,9 +94,10 @@ namespace DebugMod
             if (!DebugGUI_isActive)
                 return;
 
+
+
             // Debug Menu
             // Enable and disable the separate category windows
-            windowRect = GUI.Window(0, windowRect, (GUI.WindowFunction)DebugWindow, "Debug Menu");
 
             // Cheats Menu
             // Enable and disable different cheats
@@ -134,7 +136,7 @@ namespace DebugMod
             FastTravelButton(new Rect(10, 155, 280, 20));
             AllShinyButton(new Rect(10, 180, 280, 20));
             GUI.Label(new Rect(0, 205, 280, 20), "Press F6 to enable/disable this menu");
-            GUI.DragWindow();
+            UnityEngine.GUI.DragWindow();
         }
         public void InvulnerabilityButton(Rect r)
         {
