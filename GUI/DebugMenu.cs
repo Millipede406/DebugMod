@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DebugMod.GUI
 {
-    public class DebugMenu
+    public static class DebugMenu
     {
 
     }
