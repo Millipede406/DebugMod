@@ -51,11 +51,10 @@ namespace DebugMod.GUI
             // Allow the window to be dragged around
             UnityEngine.GUI.DragWindow();
         }
-        static bool CheatsMenuActive;
         private static void CheatsMenuButton()
         {
             string[] text = { "Show Cheats Menu", "Hide Cheats Menu" };
-            string t = CheatsMenuActive ? text[0] : text[1];
+            string t = CheatsMenu.IsActive ? text[0] : text[1];
 
             if(UnityEngine.GUI.Button(rects[1], t))
             {
@@ -66,11 +65,10 @@ namespace DebugMod.GUI
                 // Button is not pressed
             }
         }
-        static bool ToolsMenuActive;
         private static void ToolsMenuButton()
         {
             string[] text = { "Show Tools Menu", "Hide Tools Menu" };
-            string t = ToolsMenuActive ? text[0] : text[1];
+            string t = ToolsMenu.IsActive ? text[0] : text[1];
 
             if(UnityEngine.GUI.Button(rects[2], t))
             {
