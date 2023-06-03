@@ -28,7 +28,10 @@ namespace DebugMod
         public static bool DebugGUI_isActive = true;
 
 
-        private Rect windowRect;
+        private Rect GUI_DebugMenu;
+        private Rect GUI_CheatsMenu;
+        private Rect GUI_ToolsMenu;
+        private Rect GUI_ISMMenu;
 
 
         public override void OnInitializeMelon()
@@ -39,8 +42,8 @@ namespace DebugMod
 
             ModPreferences.LoadPreferences();
 
-            MelonEvents.OnGUI.Subscribe(DebugGUI, 100);
-            windowRect = new Rect(0, 0, 300, 230);
+            InitializeDebugGUI();
+            
         }
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
@@ -73,6 +76,17 @@ namespace DebugMod
         public static void DebugLog(string msg)
         {
             Instance.LoggerInstance.Msg(msg);
+        }
+        private void InitializeDebugGUI()
+        {
+            // Making the DebugGUI method recieve GUI updates
+            MelonEvents.OnGUI.Subscribe(DebugGUI, 100);
+
+            // Initializing the sizes of the windowRects
+            GUI_DebugMenu = new Rect(0, 0, 0, 0);
+            GUI_CheatsMenu = new Rect(0, 0, 0, 0);
+            GUI_ToolsMenu = new Rect(0, 0, 0, 0);
+            GUI_ISMMenu = new Rect(0, 0, 0, 0);
         }
         public void DebugGUI()
         {
@@ -122,7 +136,6 @@ namespace DebugMod
             GUI.Label(new Rect(0, 205, 280, 20), "Press F6 to enable/disable this menu");
             GUI.DragWindow();
         }
-
         public void InvulnerabilityButton(Rect r)
         {
             string invText;
