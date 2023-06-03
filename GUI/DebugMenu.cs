@@ -53,12 +53,14 @@ namespace DebugMod.GUI
         }
         private static void CheatsMenuButton()
         {
-            string[] text = { "Show Cheats Menu", "Hide Cheats Menu" };
+            string[] text = { "Hide Cheats Menu", "Show Cheats Menu" };
             string t = CheatsMenu.IsActive ? text[0] : text[1];
 
             if(UnityEngine.GUI.Button(rects[1], t))
             {
                 // Button is pressed
+
+                CheatsMenu.IsActive = !CheatsMenu.IsActive;
             }
             else
             {
@@ -67,12 +69,14 @@ namespace DebugMod.GUI
         }
         private static void ToolsMenuButton()
         {
-            string[] text = { "Show Tools Menu", "Hide Tools Menu" };
+            string[] text = { "Hide Tools Menu", "Show Tools Menu" };
             string t = ToolsMenu.IsActive ? text[0] : text[1];
 
             if(UnityEngine.GUI.Button(rects[2], t))
             {
                 // Button is pressed
+
+                ToolsMenu.IsActive = !ToolsMenu.IsActive;
             }
             else
             {
