@@ -89,12 +89,6 @@ namespace DebugMod
         {
             // Making the DebugGUI method recieve GUI updates
             MelonEvents.OnGUI.Subscribe(GUI, 100);
-
-            // Initializing the sizes of the windowRects
-            GUI_DebugMenu = new Rect(0, 0, 0, 0);
-            GUI_CheatsMenu = new Rect(0, 0, 0, 0);
-            GUI_ToolsMenu = new Rect(0, 0, 0, 0);
-            GUI_ISMMenu = new Rect(0, 0, 0, 0);
         }
         public void GUI()
         {
