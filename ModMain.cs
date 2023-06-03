@@ -5,6 +5,7 @@ using PatchQuest;
 using HarmonyLib;
 using ModdingUtilities;
 using DebugMod.Features.Tools.ISM;
+using DebugMod.GUI;
 
 namespace DebugMod
 {
@@ -55,10 +56,16 @@ namespace DebugMod
 
 
             if (Input.GetKeyDown(KeyCode.F6))
-                DebugGUI_isActive = !DebugGUI_isActive;
+            {
+                // Toggles active state of DebugMenu when F6 is pressed
+                DebugMenu.IsActive = !DebugMenu.IsActive;
+            }
 
+
+            // Random features that haven't been moved to different classes yet
             if (invulnerability)
             {
+                // Making both players invulnerable
                 PatchQuest.Player.P1.GrantImmunity(1f);
                 PatchQuest.Player.P2.GrantImmunity(1f);
             }
@@ -81,7 +88,7 @@ namespace DebugMod
         private void InitializeDebugGUI()
         {
             // Making the DebugGUI method recieve GUI updates
-            MelonEvents.OnGUI.Subscribe(DebugGUI, 100);
+            MelonEvents.OnGUI.Subscribe(GUI, 100);
 
             // Initializing the sizes of the windowRects
             GUI_DebugMenu = new Rect(0, 0, 0, 0);
@@ -89,12 +96,12 @@ namespace DebugMod
             GUI_ToolsMenu = new Rect(0, 0, 0, 0);
             GUI_ISMMenu = new Rect(0, 0, 0, 0);
         }
-        public void DebugGUI()
+        public void GUI()
         {
-            if (!DebugGUI_isActive)
+            if (DebugMenu.IsActive)
                 return;
 
-
+            DebugMenu.DrawMenu();
 
             // Debug Menu
             // Enable and disable the separate category windows
