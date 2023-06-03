@@ -277,15 +277,4 @@ namespace DebugMod
             }
         }
     }
-
-
-    [HarmonyPatch(MethodType.Normal)]
-    [HarmonyPatch(typeof(PlayerActions), nameof(PlayerActions.ActivateSkill))]
-    public class RemoveCooldownsPatchTest
-    {
-        public static void Prefix(ref float cooldown)
-        {
-            cooldown = 0f;
-        }
-    }
 }
