@@ -123,7 +123,7 @@ namespace DebugMod
         {
             
 
-
+            /*
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
             ISMButton(new Rect(10, 55, 185, 20));
             if (ISMSettingsButton(new Rect(200, 55, 90, 20)))
@@ -137,7 +137,10 @@ namespace DebugMod
             AllShinyButton(new Rect(10, 180, 280, 20));
             GUI.Label(new Rect(0, 205, 280, 20), "Press F6 to enable/disable this menu");
             UnityEngine.GUI.DragWindow();
+            */
+
         }
+        /*
         public void InvulnerabilityButton(Rect r)
         {
             string invText;
@@ -315,5 +318,6 @@ namespace DebugMod
                 ShinyMode = !ShinyMode;
             }
         }
+        */
     }
 }
