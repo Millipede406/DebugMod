@@ -4,6 +4,7 @@ using UnityEngine;
 using PatchQuest;
 using HarmonyLib;
 using ModdingUtilities;
+using DebugMod.Features.Tools.ISM;
 
 namespace DebugMod
 {
@@ -78,11 +79,34 @@ namespace DebugMod
             if (!DebugGUI_isActive)
                 return;
 
+            // Debug Menu
+            // Enable and disable the separate category windows
             windowRect = GUI.Window(0, windowRect, (GUI.WindowFunction)DebugWindow, "Debug Menu");
+
+            // Cheats Menu
+            // Enable and disable different cheats
+            // - Fast Travel
+            // - Infinite Damage
+            // - Infinite Stamina
+            // - Invulnerability
+            // - No cooldowns
+            // - Shiny Mode
+
+            // Tools Menu
+            // Enable and disable different tools
+            // - Improved Screenshot Mode
+            // - Improved Screenshot Mode Settings
+            // - Disable Fog
+
+            // Improved Screenshot Mode Settings
+            // - Hide player
+            // - Hide cursor
+            // - Hide shots
         }
         void DebugWindow(int windowID)
         {
-            //GUI.Box(new Rect(0, 0, 300, 230), "Debug Menu");
+            
+
 
             InvulnerabilityButton(new Rect(10, 30, 280, 20));
             ISMButton(new Rect(10, 55, 185, 20));
