@@ -86,6 +86,9 @@ namespace DebugMod
         {
             // Making the DebugGUI method recieve GUI updates
             MelonEvents.OnGUI.Subscribe(GUI, 100);
+
+            // Initializing individual menus
+            DebugMenu.InitializeMenu();
         }
         public void GUI()
         {

@@ -86,14 +86,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ShinyChancePatch.cs" />
-    <Compile Include="DisableFog.cs" />
-    <Compile Include="ImprovedScreenshotMode.cs" />
-    <Compile Include="InfiniteDamage.cs" />
+    <Compile Include="Features\Cheats\CooldownsPatch.cs" />
+    <Compile Include="Features\Cheats\InfiniteDamage.cs" />
+    <Compile Include="Features\Cheats\ShinyChancePatch.cs" />
+    <Compile Include="GUI\CheatsMenu.cs" />
+    <Compile Include="GUI\DebugMenu.cs" />
+    <Compile Include="Features\Tools\DisableFog.cs" />
+    <Compile Include="Features\Tools\ISM\ImprovedScreenshotMode.cs" />
+    <Compile Include="GUI\ISMSettingsMenu.cs" />
+    <Compile Include="GUI\ToolsMenu.cs" />
     <Compile Include="ModPreferences.cs" />
     <Compile Include="DebugConsole.cs" />
     <Compile Include="ModMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
