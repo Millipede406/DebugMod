@@ -27,11 +27,6 @@ namespace DebugMod
         public static bool DebugGUI_isActive = true;
 
 
-        private Rect GUI_DebugMenu;
-        private Rect GUI_CheatsMenu;
-        private Rect GUI_ToolsMenu;
-        private Rect GUI_ISMMenu;
-
 
         public override void OnInitializeMelon()
         {
