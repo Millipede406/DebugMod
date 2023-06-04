@@ -28,7 +28,7 @@ namespace DebugMod.GUI
 
         public static bool HidePlayer { get; private set; }
         public static bool HideCursor { get; private set; }
-        public static bool HideShots { get; private set; }   
+        public static bool HideShots { get; private set; }
 
         public static void InitializeMenu()
         {

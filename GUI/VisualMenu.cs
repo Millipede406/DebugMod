@@ -65,7 +65,7 @@ namespace DebugMod.GUI
         {
             string text = "Settings";
 
-            if(UnityEngine.GUI.Button(rects[2], text))
+            if (UnityEngine.GUI.Button(rects[2], text))
             {
                 ISMSettingsMenu.IsActive = !ISMSettingsMenu.IsActive;
             }
@@ -75,7 +75,7 @@ namespace DebugMod.GUI
             string[] text = { "Enable Fog", "Disable Fog" };
             string t = DisableFog ? text[0] : text[1];
 
-            if(UnityEngine.GUI.Button(rects[3], t))
+            if (UnityEngine.GUI.Button(rects[3], t))
             {
                 DisableFog = !DisableFog;
             }

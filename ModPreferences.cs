@@ -8,7 +8,7 @@ namespace DebugMod
     /// </summary>
     public static class ModPreferences
     {
-        
+
 
 
         static MelonPreferences_Category _preferences_main;
@@ -45,7 +45,7 @@ namespace DebugMod
 
         static void SetupMainCategory()
         {
-            
+
         }
         #endregion
         #region Storage
@@ -60,7 +60,7 @@ namespace DebugMod
 
         static void StoreMainPreferences()
         {
-            
+
         }
 
         #endregion

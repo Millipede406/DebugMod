@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using MelonLoader;
+﻿using UnityEngine;
 
 namespace DebugMod.GUI
 {
@@ -58,7 +52,7 @@ namespace DebugMod.GUI
             string[] text = { "Hide Cheats Menu", "Show Cheats Menu" };
             string t = CheatsMenu.IsActive ? text[0] : text[1];
 
-            if(UnityEngine.GUI.Button(rects[1], t))
+            if (UnityEngine.GUI.Button(rects[1], t))
             {
                 // Button is pressed
 
@@ -74,7 +68,7 @@ namespace DebugMod.GUI
             string[] text = { "Hide Visual Menu", "Show Visual Menu" };
             string t = VisualMenu.IsActive ? text[0] : text[1];
 
-            if(UnityEngine.GUI.Button(rects[2], t))
+            if (UnityEngine.GUI.Button(rects[2], t))
             {
                 // Button is pressed
 
