@@ -27,6 +27,9 @@ namespace DebugMod.GUI
         };
         private static Rect windowRect;
 
+        public static bool ImprovedScreenshotMode { get; private set; }
+        public static bool DisableFog { get; private set; }
+
         public static void InitializeMenu()
         {
             // Setting the initial size and position of windowRect
