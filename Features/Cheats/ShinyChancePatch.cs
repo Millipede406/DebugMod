@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PatchQuest;
 using HarmonyLib;
+using DebugMod.GUI;
 
 namespace DebugMod.Features.Cheats
 {
@@ -14,7 +15,7 @@ namespace DebugMod.Features.Cheats
     {
         public static void Postfix(ref bool __result)
         {
-            if(ModMain.ShinyMode)
+            if(CheatsMenu.ShinyMode)
                 __result = true;
         }
     }
