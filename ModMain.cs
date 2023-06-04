@@ -92,7 +92,7 @@ namespace DebugMod
         }
         public void GUI()
         {
-            if (DebugMenu.IsActive)
+            if (!DebugMenu.IsActive)
                 return;
 
             DebugMenu.DrawMenu();
