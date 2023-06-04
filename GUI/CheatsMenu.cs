@@ -68,6 +68,9 @@ namespace DebugMod.GUI
 
             ShinyModeButton();
 
+            // Make the window draggable
+            UnityEngine.GUI.DragWindow();
+        }
 
         private static void FastTravelButton()
         {
