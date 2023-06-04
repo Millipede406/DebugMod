@@ -17,7 +17,7 @@ namespace DebugMod.GUI
         private static Rect[] rects =
         {
             // Background
-            new Rect(0, 0, 300, 105),
+            new Rect(0, 0, 300, 125),
 
             // Cheats Menu button
             new Rect(10, 30, 280, 20),
@@ -26,7 +26,7 @@ namespace DebugMod.GUI
             new Rect(10, 55, 280, 20),
 
             // Toggle Info text
-            new Rect(10, 80, 280, 20)
+            new Rect(10, 80, 280, 40)
         };
         private static Rect windowRect;
 
