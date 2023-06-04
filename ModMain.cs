@@ -52,7 +52,7 @@ namespace DebugMod
             }
 
             // Disable Fog
-            if (ToolsMenu.DisableFog)
+            if (VisualMenu.DisableFog)
             {
                 // Disabling fog
                 DisableFog.Update();
@@ -72,7 +72,7 @@ namespace DebugMod
 
             CheatsMenu.InitializeMenu();
 
-            ToolsMenu.InitializeMenu();
+            VisualMenu.InitializeMenu();
         }
         public void GUI()
         {
@@ -86,9 +86,9 @@ namespace DebugMod
                 CheatsMenu.DrawMenu();
             }
 
-            if (ToolsMenu.IsActive)
+            if (VisualMenu.IsActive)
             {
-                ToolsMenu.DrawMenu();
+                VisualMenu.DrawMenu();
             }
 
             if (ISMSettingsMenu.IsActive)

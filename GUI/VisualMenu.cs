@@ -2,7 +2,7 @@
 
 namespace DebugMod.GUI
 {
-    public static class ToolsMenu
+    public static class VisualMenu
     {
         public const int WINDOW_ID = 2;
 
