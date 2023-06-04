@@ -1,6 +1,6 @@
 ﻿using PatchQuest;
 
-namespace DebugMod.Features.Tools
+namespace DebugMod.Features.Visual
 {
     public static class DisableFog
     {
