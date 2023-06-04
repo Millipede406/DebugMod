@@ -9,7 +9,7 @@ namespace DebugMod.GUI
         private static Rect[] rects =
         {
             // Window rect
-            new Rect(310, 0, 300, 180),
+            new Rect(310, 0, 300, 190),
 
             // Fast Travel rect
             new Rect(10, 30, 280, 20),
