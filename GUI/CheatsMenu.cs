@@ -83,14 +83,7 @@ namespace DebugMod.GUI
         {
             string text = "Fast Travel";
 
-            if (UnityEngine.GUI.Button(rects[1], text))
-            {
-                // Button is pressed
-            }
-            else
-            {
-                // Button is not pressed
-            }
+            FastTravel = UnityEngine.GUI.Button(rects[1], text);
         }
 
         private static void InfiniteDamageButton()
@@ -100,11 +93,7 @@ namespace DebugMod.GUI
 
             if (UnityEngine.GUI.Button(rects[2], t))
             {
-                // Button is pressed
-            }
-            else
-            {
-                // Button is not pressed
+                InfiniteDamage = !InfiniteDamage;
             }
         }
         private static void InfiniteStaminaButton()
@@ -114,11 +103,7 @@ namespace DebugMod.GUI
 
             if (UnityEngine.GUI.Button(rects[3], t))
             {
-                // Button is pressed
-            }
-            else
-            {
-                // Button is not pressed
+                InfiniteStamina = !InfiniteStamina;
             }
         }
         private static void InvulerabilityButton()
@@ -128,11 +113,7 @@ namespace DebugMod.GUI
 
             if (UnityEngine.GUI.Button(rects[4], t))
             {
-                // Button is pressed
-            }
-            else
-            {
-                // Button is not pressed
+                Invulnerability = !Invulnerability;
             }
         }
         private static void NoCooldownsButton()
@@ -142,11 +123,7 @@ namespace DebugMod.GUI
 
             if (UnityEngine.GUI.Button(rects[5], t))
             {
-                // Button is pressed
-            }
-            else
-            {
-                // Button is not pressed
+                NoCooldowns = !NoCooldowns;
             }
         }
         private static void ShinyModeButton()
@@ -156,11 +133,7 @@ namespace DebugMod.GUI
 
             if (UnityEngine.GUI.Button(rects[6], t))
             {
-                // Button is pressed
-            }
-            else
-            {
-                // Button is not pressed
+                ShinyMode = !ShinyMode;
             }
         }
     }
