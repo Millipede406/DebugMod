@@ -38,7 +38,15 @@ namespace DebugMod.GUI
 
         public static void DrawMenu()
         {
+            // Draw the window
+            windowRect = UnityEngine.GUI.Window(2, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Tools Menu");
+        }
+        public static void Menu(int windowID)
+        {
+            //Draw window contents
 
+            // Make the window draggable
+            UnityEngine.GUI.DragWindow();
         }
     }
 }
