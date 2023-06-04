@@ -1,6 +1,6 @@
-﻿using HarmonyLib;
+﻿using DebugMod.GUI;
+using HarmonyLib;
 using PatchQuest;
-using DebugMod.GUI;
 
 namespace DebugMod.Features.Cheats
 {
