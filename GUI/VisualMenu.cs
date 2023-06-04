@@ -59,15 +59,15 @@ namespace DebugMod.GUI
             if (UnityEngine.GUI.Button(rects[1], t))
             {
                 ImprovedScreenshotMode = !ImprovedScreenshotMode;
-            }
 
-            if (ImprovedScreenshotMode)
-            {
-                Features.Visual.ISM.ImprovedScreenshotMode.EnableIsm();
-            }
-            else
-            {
-                Features.Visual.ISM.ImprovedScreenshotMode.DisableIsm();
+                if (ImprovedScreenshotMode)
+                {
+                    Features.Visual.ISM.ImprovedScreenshotMode.EnableIsm();
+                }
+                else
+                {
+                    Features.Visual.ISM.ImprovedScreenshotMode.DisableIsm();
+                }
             }
         }
         private static void ImprovedScreenshotModeSettingsButton()
