@@ -1,4 +1,4 @@
-﻿using DebugMod.Features.Tools;
+﻿using DebugMod.Features.Visual;
 using DebugMod.GUI;
 using MelonLoader;
 using ModdingUtilities;
