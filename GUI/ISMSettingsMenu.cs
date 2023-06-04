@@ -30,6 +30,10 @@ namespace DebugMod.GUI
         };
         private static Rect windowRect;
 
+        public static bool HidePlayer { get; private set; }
+        public static bool HideCursor { get; private set; }
+        public static bool HideShots { get; private set; }   
+
         public static void InitializeMenu()
         {
             // Setting initial size and position of windowRect
@@ -58,19 +62,23 @@ namespace DebugMod.GUI
         }
         private static void HidePlayerToggle()
         {
-
+            string text = "Hide Player";
+            HidePlayer = UnityEngine.GUI.Toggle(rects[1], HidePlayer, text);
         }
         private static void HideCursorToggle()
         {
-
+            string text = "Hide Cursor";
+            HideCursor = UnityEngine.GUI.Toggle(rects[2], HideCursor, text);
         }
         private static void HideShotsToggle()
         {
-
+            string text = "Hide Shots*";
+            HideShots = UnityEngine.GUI.Toggle(rects[3], HideShots, text);
         }
         private static void WarningLabel()
         {
-
+            string text = "*Can cause a significant amount of lag to enable and disable";
+            UnityEngine.GUI.Label(rects[4], text);
         }
     }
 }
