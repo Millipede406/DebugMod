@@ -60,6 +60,15 @@ namespace DebugMod.GUI
             {
                 ImprovedScreenshotMode = !ImprovedScreenshotMode;
             }
+
+            if (ImprovedScreenshotMode)
+            {
+                Features.Visual.ISM.ImprovedScreenshotMode.EnableIsm();
+            }
+            else
+            {
+                Features.Visual.ISM.ImprovedScreenshotMode.DisableIsm();
+            }
         }
         private static void ImprovedScreenshotModeSettingsButton()
         {

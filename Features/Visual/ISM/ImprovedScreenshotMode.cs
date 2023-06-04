@@ -1,4 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using DebugMod.GUI;
+using Il2CppSystem;
+using MelonLoader;
+using HarmonyLib;
+using UnhollowerBaseLib;
+using UnhollowerRuntimeLib;
 
 namespace DebugMod.Features.Visual.ISM
 {
@@ -6,10 +13,10 @@ namespace DebugMod.Features.Visual.ISM
     {
         public static GameObject Player;
         public static GameObject Crosshair;
-        /*
+
         public static void EnableIsm()
         {
-            if (ModMain.ism_hidePlayer)
+            if (ISMSettingsMenu.HidePlayer)
             {
                 if (GetPlayerReference())
                 {
@@ -17,7 +24,7 @@ namespace DebugMod.Features.Visual.ISM
                 }
             }
 
-            if (ModMain.ism_hideCursor)
+            if (ISMSettingsMenu.HideCursor)
             {
                 if (GetCursorReference())
                 {
@@ -25,7 +32,7 @@ namespace DebugMod.Features.Visual.ISM
                 }
             }
 
-            if (ModMain.ism_hideShots)
+            if (ISMSettingsMenu.HideShots)
             {
                 SetShots(true);
             }
@@ -33,7 +40,7 @@ namespace DebugMod.Features.Visual.ISM
 
         public static void DisableIsm()
         {
-            if (ModMain.ism_hidePlayer)
+            if (ISMSettingsMenu.HidePlayer)
             {
                 if (GetPlayerReference())
                 {
@@ -41,7 +48,7 @@ namespace DebugMod.Features.Visual.ISM
                 }
             }
 
-            if (ModMain.ism_hideCursor)
+            if (ISMSettingsMenu.HideCursor)
             {
                 if (GetCursorReference())
                 {
@@ -49,7 +56,7 @@ namespace DebugMod.Features.Visual.ISM
                 }
             }
 
-            if (ModMain.ism_hideShots)
+            if (ISMSettingsMenu.HideShots)
             {
                 SetShots(false);
             }
@@ -92,6 +99,5 @@ namespace DebugMod.Features.Visual.ISM
             Crosshair = GameObject.Find("Letterbox Canvas/Crosshair");
             return true;
         }
-        */
     }
 }
