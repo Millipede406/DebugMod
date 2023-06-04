@@ -9,25 +9,25 @@ namespace DebugMod.GUI
         private static Rect[] rects =
         {
             // Window rect
-            new Rect(0, 0, 0, 0),
+            new Rect(310, 0, 300, 180),
 
             // Fast Travel rect
-            new Rect(0, 0, 0, 0),
+            new Rect(320, 30, 280, 20),
 
             // Infinite Damage rect
-            new Rect(0, 0, 0, 0),
+            new Rect(320, 55, 280, 20),
 
             // Infinite Stamina rect
-            new Rect(0, 0, 0, 0),
+            new Rect(320, 80, 280, 20),
 
             // Invulnerability rect
-            new Rect(0, 0, 0, 0),
+            new Rect(320, 105, 280, 20),
 
             // No Cooldowns rect
-            new Rect(0, 0, 0, 0),
+            new Rect(320, 130, 280, 20),
 
             // Shiny Mode rect
-            new Rect(0, 0, 0, 0)
+            new Rect(320, 155, 280, 20)
         };
 
         private static Rect windowRect;
