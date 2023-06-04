@@ -80,7 +80,7 @@ namespace DebugMod.GUI
         private static void InfiniteDamageButton()
         {
             string[] text = { "Enable Infinite Damage", "Disable Infinite Damage" };
-            string t = true ? text[0] : text[1];
+            string t = InfiniteDamage ? text[0] : text[1];
 
             if (UnityEngine.GUI.Button(rects[2], t))
             {
@@ -90,7 +90,7 @@ namespace DebugMod.GUI
         private static void InfiniteStaminaButton()
         {
             string[] text = { "Enable Infinite Stamina", "Disable Infinite Stamina" };
-            string t = true ? text[0] : text[1];
+            string t = InfiniteStamina ? text[0] : text[1];
 
             if (UnityEngine.GUI.Button(rects[3], t))
             {
@@ -100,7 +100,7 @@ namespace DebugMod.GUI
         private static void InvulerabilityButton()
         {
             string[] text = { "Enable Invulnerability", "Disable Invulnerability" };
-            string t = true ? text[0] : text[1];
+            string t = Invulnerability ? text[0] : text[1];
 
             if (UnityEngine.GUI.Button(rects[4], t))
             {
@@ -110,7 +110,7 @@ namespace DebugMod.GUI
         private static void NoCooldownsButton()
         {
             string[] text = { "Disable Cooldowns", "Enable Cooldowns" };
-            string t = true ? text[0] : text[1];
+            string t = NoCooldowns ? text[0] : text[1];
 
             if (UnityEngine.GUI.Button(rects[5], t))
             {
@@ -120,7 +120,7 @@ namespace DebugMod.GUI
         private static void ShinyModeButton()
         {
             string[] text = { "Enable Shiny Mode", "Disable Shiny Mode" };
-            string t = true ? text[0] : text[1];
+            string t = ShinyMode ? text[0] : text[1];
 
             if (UnityEngine.GUI.Button(rects[6], t))
             {
