@@ -17,10 +17,10 @@ namespace DebugMod.GUI
             new Rect(10, 30, 280, 20),
 
             // ISM Settings Rect
-            new Rect(0, 55, 280, 20),
+            new Rect(10, 55, 280, 20),
 
             // Disable Fog
-            new Rect(0, 80, 280, 20)
+            new Rect(10, 80, 280, 20)
         };
         private static Rect windowRect;
 
