@@ -10,7 +10,7 @@ namespace DebugMod.GUI
 {
     public static class DebugMenu
     {
-        public static bool IsActive;
+        public static bool IsActive = true;
 
         private static Rect[] rects =
         {
