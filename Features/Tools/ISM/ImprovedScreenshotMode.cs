@@ -9,7 +9,7 @@ namespace DebugMod.Features.Tools.ISM
     {
         public static GameObject Player;
         public static GameObject Crosshair;
-
+        /*
         public static void EnableIsm()
         {
             if (ModMain.ism_hidePlayer)
@@ -95,5 +95,6 @@ namespace DebugMod.Features.Tools.ISM
             Crosshair = GameObject.Find("Letterbox Canvas/Crosshair");
             return true;
         }
+        */
     }
 }
