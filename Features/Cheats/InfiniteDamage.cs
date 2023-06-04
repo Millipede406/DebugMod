@@ -1,5 +1,6 @@
 ﻿using PatchQuest;
 using HarmonyLib;
+using DebugMod.GUI;
 
 namespace DebugMod.Features.Cheats
 {
@@ -10,7 +11,7 @@ namespace DebugMod.Features.Cheats
     {
         public static void Postfix(ref float __result)
         {
-            if (ModMain.infDamage)
+            if (CheatsMenu.InfiniteDamage)
                 __result = int.MaxValue;
         }
     }
@@ -22,7 +23,7 @@ namespace DebugMod.Features.Cheats
     {
         public static void Postfix(ref float __result)
         {
-            if (ModMain.infDamage)
+            if (CheatsMenu.InfiniteDamage)
                 __result = int.MaxValue;
         }
     }
