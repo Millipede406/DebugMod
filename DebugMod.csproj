@@ -91,10 +91,10 @@
     <Compile Include="Features\Cheats\ShinyChancePatch.cs" />
     <Compile Include="GUI\CheatsMenu.cs" />
     <Compile Include="GUI\DebugMenu.cs" />
-    <Compile Include="Features\Tools\DisableFog.cs" />
-    <Compile Include="Features\Tools\ISM\ImprovedScreenshotMode.cs" />
+    <Compile Include="Features\Visual\DisableFog.cs" />
+    <Compile Include="Features\Visual\ISM\ImprovedScreenshotMode.cs" />
     <Compile Include="GUI\ISMSettingsMenu.cs" />
-    <Compile Include="GUI\ToolsMenu.cs" />
+    <Compile Include="GUI\VisualMenu.cs" />
     <Compile Include="ModPreferences.cs" />
     <Compile Include="DebugConsole.cs" />
     <Compile Include="ModMain.cs" />
