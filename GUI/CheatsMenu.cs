@@ -56,6 +56,90 @@ namespace DebugMod.GUI
         public static void Menu(int windowID)
         {
             // Draw window contents
+
+        private static void FastTravelButton()
+        {
+            string text = "Fast Travel";
+
+            if (UnityEngine.GUI.Button(rects[1], text))
+            {
+                // Button is pressed
+            }
+            else
+            {
+                // Button is not pressed
+            }
+        }
+
+        private static void InfiniteDamageButton()
+        {
+            string[] text = { "Enable Infinite Damage", "Disable Infinite Damage" };
+            string t = true ? text[0] : text[1];
+
+            if (UnityEngine.GUI.Button(rects[2], t))
+            {
+                // Button is pressed
+            }
+            else
+            {
+                // Button is not pressed
+            }
+        }
+        private static void InfiniteStaminaButton()
+        {
+            string[] text = { "Enable Infinite Stamina", "Disable Infinite Stamina" };
+            string t = true ? text[0] : text[1];
+
+            if (UnityEngine.GUI.Button(rects[3], t))
+            {
+                // Button is pressed
+            }
+            else
+            {
+                // Button is not pressed
+            }
+        }
+        private static void InvulerabilityButton()
+        {
+            string[] text = { "Enable Invulnerability", "Disable Invulnerability" };
+            string t = true ? text[0] : text[1];
+
+            if (UnityEngine.GUI.Button(rects[4], t))
+            {
+                // Button is pressed
+            }
+            else
+            {
+                // Button is not pressed
+            }
+        }
+        private static void NoCooldownsButton()
+        {
+            string[] text = { "Disable Cooldowns", "Enable Cooldowns" };
+            string t = true ? text[0] : text[1];
+
+            if (UnityEngine.GUI.Button(rects[5], t))
+            {
+                // Button is pressed
+            }
+            else
+            {
+                // Button is not pressed
+            }
+        }
+        private static void ShinyModeButton()
+        {
+            string[] text = { "Enable Shiny Mode", "Disable Shiny Mode" };
+            string t = true ? text[0] : text[1];
+
+            if (UnityEngine.GUI.Button(rects[6], t))
+            {
+                // Button is pressed
+            }
+            else
+            {
+                // Button is not pressed
+            }
         }
     }
 }
