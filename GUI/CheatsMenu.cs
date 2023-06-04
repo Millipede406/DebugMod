@@ -34,12 +34,12 @@ namespace DebugMod.GUI
 
         private static Rect windowRect;
 
-        public static bool FastTravel { get; private set; }
-        public static bool InfiniteDamage { get; private set; }
-        public static bool InfiniteStamina { get; private set; }
-        public static bool Invulnerability { get; private set; }
-        public static bool NoCooldowns { get; private set; }
-        public static bool ShinyMode { get; private set; }
+        public static bool FastTravel { get; private set; } = false;
+        public static bool InfiniteDamage { get; private set; } = false;
+        public static bool InfiniteStamina { get; private set; } = false;
+        public static bool Invulnerability { get; private set; } = false;
+        public static bool NoCooldowns { get; private set; } = false;
+        public static bool ShinyMode { get; private set; } = false;
 
         public static void InitializeMenu()
         {
