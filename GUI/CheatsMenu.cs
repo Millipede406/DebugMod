@@ -4,6 +4,8 @@ namespace DebugMod.GUI
 {
     public static class CheatsMenu
     {
+        public const int WINDOW_ID = 1;
+
         public static bool IsActive;
 
         private static Rect[] rects =
@@ -48,7 +50,7 @@ namespace DebugMod.GUI
         public static void DrawMenu()
         {
             // Draw the window
-            windowRect = UnityEngine.GUI.Window(1, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Cheats Menu");
+            windowRect = UnityEngine.GUI.Window(WINDOW_ID, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Cheats Menu");
         }
 
         public static void Menu(int windowID)

@@ -10,6 +10,8 @@ namespace DebugMod.GUI
 {
     public static class DebugMenu
     {
+        public const int WINDOW_ID = 0;
+
         public static bool IsActive = true;
 
         private static Rect[] rects =
@@ -36,7 +38,7 @@ namespace DebugMod.GUI
         public static void DrawMenu()
         {
             // Draw the window
-            windowRect = UnityEngine.GUI.Window(0, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Debug Menu");
+            windowRect = UnityEngine.GUI.Window(WINDOW_ID, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Debug Menu");
         }
         public static void Menu(int windowID)
         {
