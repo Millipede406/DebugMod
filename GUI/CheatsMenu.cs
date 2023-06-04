@@ -56,6 +56,18 @@ namespace DebugMod.GUI
         public static void Menu(int windowID)
         {
             // Draw window contents
+            FastTravelButton();
+
+            InfiniteDamageButton();
+
+            InfiniteStaminaButton();
+
+            InvulerabilityButton();
+
+            NoCooldownsButton();
+
+            ShinyModeButton();
+
 
         private static void FastTravelButton()
         {
