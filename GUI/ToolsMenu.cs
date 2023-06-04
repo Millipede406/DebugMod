@@ -6,26 +6,21 @@ namespace DebugMod.GUI
     {
         public const int WINDOW_ID = 2;
 
-        // Tools Menu
-        // Enable and disable different tools
-        // - Improved Screenshot Mode
-        // - Improved Screenshot Mode Settings
-        // - Disable Fog
         public static bool IsActive;
 
         private static Rect[] rects =
         {
             // Window rect
-            new Rect(0, 0, 0, 0),
+            new Rect(620, 0, 300, 110),
 
             // ISM Rect
-            new Rect(0, 0, 0, 0),
+            new Rect(10, 30, 280, 20),
 
             // ISM Settings Rect
-            new Rect(0, 0, 0, 0),
+            new Rect(0, 55, 280, 20),
 
             // Disable Fog
-            new Rect(0, 0, 0, 0)
+            new Rect(0, 80, 280, 20)
         };
         private static Rect windowRect;
 
