@@ -44,14 +44,11 @@ namespace DebugMod
                 PatchQuest.Player.P2.GrantImmunity(1f);
             }
 
-            // This one hasn't been implemented into the ToolsMenu yet...
-
-            /*
-            if (hideFog)
+            if (ToolsMenu.DisableFog)
             {
                 DisableFog.Update();
             }
-            */
+
 
 
             if (CheatsMenu.InfiniteDamage)
@@ -73,7 +70,9 @@ namespace DebugMod
 
             // Initializing individual menus
             DebugMenu.InitializeMenu();
+
             CheatsMenu.InitializeMenu();
+
             ToolsMenu.InitializeMenu();
         }
         public void GUI()
