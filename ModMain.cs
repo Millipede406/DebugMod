@@ -73,6 +73,8 @@ namespace DebugMod
             CheatsMenu.InitializeMenu();
 
             VisualMenu.InitializeMenu();
+
+            ISMSettingsMenu.InitializeMenu();
         }
         public void GUI()
         {
@@ -103,10 +105,7 @@ namespace DebugMod
 
             
 
-            // Improved Screenshot Mode Settings
-            // - Hide player
-            // - Hide cursor
-            // - Hide shots
+            
         }
         void DebugWindow(int windowID)
         {
