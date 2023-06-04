@@ -67,7 +67,7 @@ namespace DebugMod.GUI
 
             if(UnityEngine.GUI.Button(rects[2], text))
             {
-                // Enable the ISM Settings Menu
+                ISMSettingsMenu.IsActive = !ISMSettingsMenu.IsActive;
             }
         }
         private static void DisableFogButton()
