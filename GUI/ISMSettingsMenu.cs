@@ -4,10 +4,6 @@ namespace DebugMod.GUI
 {
     public static class ISMSettingsMenu
     {
-        // Improved Screenshot Mode Settings
-        // - Hide player
-        // - Hide cursor
-        // - Hide shots
         public const int WINDOW_ID = 3;
 
         public static bool IsActive;
