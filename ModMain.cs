@@ -37,17 +37,24 @@ namespace DebugMod
 
 
             // Random features that haven't been moved to different classes yet
-            if (invulnerability)
+            if (CheatsMenu.Invulnerability)
             {
                 // Making both players invulnerable
                 PatchQuest.Player.P1.GrantImmunity(1f);
                 PatchQuest.Player.P2.GrantImmunity(1f);
             }
+
+            // This one hasn't been implemented into the ToolsMenu yet...
+
+            /*
             if (hideFog)
             {
                 DisableFog.Update();
             }
-            if (infStamina)
+            */
+
+
+            if (CheatsMenu.InfiniteDamage)
             {
                 PatchQuest.Player.P1.Stamina = int.MaxValue;
                 PatchQuest.Player.P2.Stamina = int.MaxValue;
