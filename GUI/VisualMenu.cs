@@ -36,7 +36,7 @@ namespace DebugMod.GUI
         public static void DrawMenu()
         {
             // Draw the window
-            windowRect = UnityEngine.GUI.Window(WINDOW_ID, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Tools Menu");
+            windowRect = UnityEngine.GUI.Window(WINDOW_ID, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Visual Menu");
         }
         public static void Menu(int windowID)
         {

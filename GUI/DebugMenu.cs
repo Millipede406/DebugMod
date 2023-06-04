@@ -71,7 +71,7 @@ namespace DebugMod.GUI
         }
         private static void ToolsMenuButton()
         {
-            string[] text = { "Hide Tools Menu", "Show Tools Menu" };
+            string[] text = { "Hide Visual Menu", "Show Visual Menu" };
             string t = VisualMenu.IsActive ? text[0] : text[1];
 
             if(UnityEngine.GUI.Button(rects[2], t))
