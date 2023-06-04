@@ -74,6 +74,7 @@ namespace DebugMod
             // Initializing individual menus
             DebugMenu.InitializeMenu();
             CheatsMenu.InitializeMenu();
+            ToolsMenu.InitializeMenu();
         }
         public void GUI()
         {
@@ -97,11 +98,7 @@ namespace DebugMod
 
             
 
-            // Tools Menu
-            // Enable and disable different tools
-            // - Improved Screenshot Mode
-            // - Improved Screenshot Mode Settings
-            // - Disable Fog
+            
 
             // Improved Screenshot Mode Settings
             // - Hide player
