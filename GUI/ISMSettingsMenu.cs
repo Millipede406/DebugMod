@@ -10,19 +10,19 @@ namespace DebugMod.GUI
         private static Rect[] rects =
         {
             // Window rect
-            new Rect(0, 0, 0, 0),
+            new Rect(930, 0, 300, 135),
 
             // Hide player rect
-            new Rect(0, 0, 0, 0),
+            new Rect(10, 30, 280, 20),
 
             // Hide cursor rect
-            new Rect(0, 0, 0, 0),
+            new Rect(10, 55, 280, 20),
 
             // Hide shots rect
-            new Rect(0, 0, 0, 0),
+            new Rect(10, 80, 280, 20),
 
             // Warning label
-            new Rect(0, 0, 0, 0)
+            new Rect(10, 105, 280, 20)
         };
         private static Rect windowRect;
 
