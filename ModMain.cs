@@ -10,24 +10,6 @@ namespace DebugMod
     {
         public static ModMain Instance;
 
-
-        bool improvedScreenshotMode;
-        bool invulnerability;
-        bool ismSettings;
-
-        public static bool ism_hidePlayer = true;
-        public static bool ism_hideCursor = true;
-        public static bool ism_hideShots = false;
-
-        public static bool hideFog = false;
-        public static bool infStamina = false;
-        public static bool infDamage = false;
-        public static bool ShinyMode = false;
-
-        public static bool DebugGUI_isActive = true;
-
-
-
         public override void OnInitializeMelon()
         {
             base.OnInitializeMelon();
