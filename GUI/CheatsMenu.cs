@@ -4,15 +4,6 @@ namespace DebugMod.GUI
 {
     public static class CheatsMenu
     {
-        // Cheats Menu
-        // Enable and disable different cheats
-        // - Fast Travel
-        // - Infinite Damage
-        // - Infinite Stamina
-        // - Invulnerability
-        // - No cooldowns
-        // - Shiny Mode
-
         public static bool IsActive;
 
         private static Rect[] rects =
