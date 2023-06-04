@@ -27,16 +27,15 @@ namespace DebugMod
         }
         public override void MainUpdate()
         {
-
-
+            // Toggles active state of DebugMenu when F6 is pressed
             if (Input.GetKeyDown(KeyCode.F6))
             {
-                // Toggles active state of DebugMenu when F6 is pressed
                 DebugMenu.IsActive = !DebugMenu.IsActive;
             }
 
+            // Random features that haven't been moved to different classes yet:
 
-            // Random features that haven't been moved to different classes yet
+            // Invulnerability
             if (CheatsMenu.Invulnerability)
             {
                 // Making both players invulnerable
@@ -44,20 +43,20 @@ namespace DebugMod
                 PatchQuest.Player.P2.GrantImmunity(1f);
             }
 
-            if (ToolsMenu.DisableFog)
-            {
-                DisableFog.Update();
-            }
-
-
-
+            // Infinite Damage
             if (CheatsMenu.InfiniteDamage)
             {
+                // Setting stamina for both players to maximum possible value
                 PatchQuest.Player.P1.Stamina = int.MaxValue;
                 PatchQuest.Player.P2.Stamina = int.MaxValue;
             }
 
-
+            // Disable Fog
+            if (ToolsMenu.DisableFog)
+            {
+                // Disabling fog
+                DisableFog.Update();
+            }
         }
         public static void DebugLog(string msg)
         {
