@@ -14,6 +14,7 @@ namespace DebugMod.GUI
         // - Shiny Mode
 
         public static bool IsActive;
+
         private static Rect[] rects =
         {
             // Window rect
@@ -38,9 +39,23 @@ namespace DebugMod.GUI
             new Rect(0, 0, 0, 0)
         };
 
+        private static Rect windowRect;
+
+        public static void InitializeMenu()
+        {
+            // Setting the initial size and position of windowRect
+            windowRect = rects[0];
+        }
+
         public static void DrawMenu()
         {
+            // Draw the window
+            windowRect = UnityEngine.GUI.Window(1, windowRect, (UnityEngine.GUI.WindowFunction)Menu, "Cheats Menu");
+        }
 
+        public static void Menu(int windowID)
+        {
+            // Draw window contents
         }
     }
 }

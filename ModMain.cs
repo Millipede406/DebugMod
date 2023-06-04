@@ -89,6 +89,7 @@ namespace DebugMod
 
             // Initializing individual menus
             DebugMenu.InitializeMenu();
+            CheatsMenu.InitializeMenu();
         }
         public void GUI()
         {
@@ -110,14 +111,7 @@ namespace DebugMod
             // Debug Menu
             // Enable and disable the separate category windows
 
-            // Cheats Menu
-            // Enable and disable different cheats
-            // - Fast Travel
-            // - Infinite Damage
-            // - Infinite Stamina
-            // - Invulnerability
-            // - No cooldowns
-            // - Shiny Mode
+            
 
             // Tools Menu
             // Enable and disable different tools
