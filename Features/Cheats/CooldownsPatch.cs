@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using PatchQuest;
+using DebugMod.GUI;
 
 namespace DebugMod.Features.Cheats
 {
@@ -9,7 +10,10 @@ namespace DebugMod.Features.Cheats
     {
         public static void Prefix(ref float cooldown)
         {
-            cooldown = 0f;
+            if (CheatsMenu.NoCooldowns)
+            {
+                cooldown = 0f;
+            }
         }
     }
 }
