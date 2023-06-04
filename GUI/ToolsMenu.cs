@@ -11,16 +11,16 @@ namespace DebugMod.GUI
         private static Rect[] rects =
         {
             // Window rect
-            new Rect(620, 0, 300, 110),
+            new Rect(620, 0, 300, 85),
 
             // ISM Rect
-            new Rect(10, 30, 280, 20),
+            new Rect(10, 30, 185, 20),
 
             // ISM Settings Rect
-            new Rect(10, 55, 280, 20),
+            new Rect(200, 30, 90, 20),
 
             // Disable Fog
-            new Rect(10, 80, 280, 20)
+            new Rect(10, 55, 280, 20)
         };
         private static Rect windowRect;
 
