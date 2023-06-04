@@ -91,6 +91,11 @@ namespace DebugMod
                 ToolsMenu.DrawMenu();
             }
 
+            if (ISMSettingsMenu.IsActive)
+            {
+                ISMSettingsMenu.DrawMenu();
+            }
+
             // Debug Menu
             // Enable and disable the separate category windows
 
