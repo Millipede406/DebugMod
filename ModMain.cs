@@ -25,11 +25,6 @@ namespace DebugMod
             Features.FeatureManager.Initialize();
         }
 
-        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
-        {
-            LoggerInstance.Msg($"Loaded Scene: {sceneName} ({buildIndex})");
-        }
-
         public override void MainUpdate()
         {
             // Toggles active state of DebugMenu when F6 is pressed
@@ -40,15 +35,6 @@ namespace DebugMod
 
             // Updating all of the features
             Features.FeatureManager.Update();
-
-            // Random features that haven't been moved to different classes yet:
-
-            // Disable Fog
-            if (VisualMenu.DisableFog)
-            {
-                // Disabling fog
-                DisableFog.Update();
-            }
         }
 
         private void InitializeDebugGUI()
@@ -68,6 +54,8 @@ namespace DebugMod
 
         public void GUI()
         {
+            // Drawing each menu
+
             if (!DebugMenu.IsActive)
                 return;
 
