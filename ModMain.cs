@@ -69,11 +69,6 @@ namespace DebugMod
             }
         }
 
-        public static void DebugLog(string msg)
-        {
-            Instance.LoggerInstance.Msg(msg);
-        }
-
         private void InitializeDebugGUI()
         {
             // Making the DebugGUI method recieve GUI updates
