@@ -25,6 +25,7 @@ namespace DebugMod
             // Initializing features
             Features.FeatureManager.Initialize();
         }
+
         private void InitializeDebugGUI()
         {
             // Making the DebugGUI method recieve GUI updates
