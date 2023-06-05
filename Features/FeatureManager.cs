@@ -8,19 +8,19 @@ using DebugMod.Features.Visual;
 
 namespace DebugMod.Features
 {
-    /// <summary>
-    /// This class handles instances of all features which need to be updated / initialized. So not including patches
-    /// This looks kinda complicated, but basically what it does is it gets a list of every feature
-    ///     (which is hardcoded so if you create a feature you will need to implement it here)
-    /// And then it will initialize and update every feature in the list
-    /// 
-    /// 
-    /// In order to add to this, find the related method that your new feature is a part of, and then simply write (list).Add(new Feature());
-    /// Replacing (list) with the name of the list in that method
-    /// And obviously replacing Feature with the name of your feature
-    /// Assuming your feature derives from IFeature, which it should. And if it doesn't then you might want to go do that otherwise this won't work.
-    /// Anyway yeah that's how this works have fun
-    /// </summary>
+    //                                           --- HOW TO USE ---
+    // This class handles instances of all features which need to be updated / initialized. So not including patches
+    // This looks kinda complicated, but basically what it does is it gets a list of every feature
+    //     (which is hardcoded so if you create a feature you will need to implement it here)
+    // And then it will initialize and update every feature in the list
+    // 
+    // 
+    // In order to add to this, find the related method that your new feature is a part of, and then simply write (list).Add(new Feature());
+    // Replacing (list) with the name of the list in that method
+    // And obviously replacing Feature with the name of your feature
+    // Assuming your feature derives from IFeature, which it should. And if it doesn't then you might want to go do that otherwise this won't work.
+    // Anyway yeah that's how this works have fun
+
     public static class FeatureManager
     {
         public static List<IFeature> features;
