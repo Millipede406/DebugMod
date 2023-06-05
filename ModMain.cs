@@ -43,13 +43,6 @@ namespace DebugMod
 
             // Random features that haven't been moved to different classes yet:
 
-            // Invulnerability
-            if (CheatsMenu.Invulnerability)
-            {
-                // Making both players invulnerable
-                PatchQuest.Player.P1.GrantImmunity(1f);
-                PatchQuest.Player.P2.GrantImmunity(1f);
-            }
 
             // Infinite Damage
             if (CheatsMenu.InfiniteDamage)
