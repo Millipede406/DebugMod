@@ -10,6 +10,7 @@ namespace DebugMod
     {
         public static ModMain Instance;
 
+        #region Initialization
         public override void OnInitializeMelon()
         {
             // Initializing singleton
@@ -24,19 +25,6 @@ namespace DebugMod
             // Initializing features
             Features.FeatureManager.Initialize();
         }
-
-        public override void MainUpdate()
-        {
-            // Toggles active state of DebugMenu when F6 is pressed
-            if (Input.GetKeyDown(KeyCode.F6))
-            {
-                DebugMenu.IsActive = !DebugMenu.IsActive;
-            }
-
-            // Updating all of the features
-            Features.FeatureManager.Update();
-        }
-
         private void InitializeDebugGUI()
         {
             // Making the DebugGUI method recieve GUI updates
@@ -50,6 +38,20 @@ namespace DebugMod
             VisualMenu.InitializeMenu();
 
             ISMSettingsMenu.InitializeMenu();
+        }
+        #endregion
+
+        #region Update
+        public override void MainUpdate()
+        {
+            // Toggles active state of DebugMenu when F6 is pressed
+            if (Input.GetKeyDown(KeyCode.F6))
+            {
+                DebugMenu.IsActive = !DebugMenu.IsActive;
+            }
+
+            // Updating all of the features
+            Features.FeatureManager.Update();
         }
 
         public void GUI()
@@ -76,5 +78,6 @@ namespace DebugMod
                 ISMSettingsMenu.DrawMenu();
             }
         }
+        #endregion
     }
 }
