@@ -43,17 +43,6 @@ namespace DebugMod
 
             // Random features that haven't been moved to different classes yet:
 
-
-            
-
-            // Fast Travel
-            if (CheatsMenu.FastTravel)
-            {
-                // Making both players enter the ballooning state, allowing them to fast travel.
-                PatchQuest.Player.P1.SetBallooning(true);
-                PatchQuest.Player.P2.SetBallooning(true);
-            }
-
             // Disable Fog
             if (VisualMenu.DisableFog)
             {
