@@ -62,6 +62,7 @@ namespace DebugMod.Features
             // Creating instance of features
             cheats.Add(new Invulnerability());
             cheats.Add(new InfiniteStamina());
+            cheats.Add(new FastTravel());
 
             // Returning list of features
             return cheats;
