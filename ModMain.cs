@@ -44,13 +44,7 @@ namespace DebugMod
             // Random features that haven't been moved to different classes yet:
 
 
-            // Infinite Damage
-            if (CheatsMenu.InfiniteDamage)
-            {
-                // Setting stamina for both players to maximum possible value
-                PatchQuest.Player.P1.Stamina = int.MaxValue;
-                PatchQuest.Player.P2.Stamina = int.MaxValue;
-            }
+            
 
             // Fast Travel
             if (CheatsMenu.FastTravel)
