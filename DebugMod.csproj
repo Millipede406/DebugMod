@@ -86,9 +86,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Cheats\FastTravel.cs" />
+    <Compile Include="Features\Cheats\InfiniteStamina.cs" />
+    <Compile Include="Features\Cheats\Invulnerability.cs" />
     <Compile Include="Features\Cheats\CooldownsPatch.cs" />
     <Compile Include="Features\Cheats\InfiniteDamage.cs" />
     <Compile Include="Features\Cheats\ShinyChancePatch.cs" />
+    <Compile Include="Features\FeatureManager.cs" />
+    <Compile Include="Features\IFeature.cs" />
     <Compile Include="GUI\CheatsMenu.cs" />
     <Compile Include="GUI\DebugMenu.cs" />
     <Compile Include="Features\Visual\DisableFog.cs" />
