@@ -14,13 +14,17 @@ namespace DebugMod.Features
 
         public static void Initialize()
         {
+            // Initializing FeatureManager
             features = GetAllFeatures();
+
+            // Initializing features
+            InitializeFeatures();
         }
 
         public static void Update()
         {
-            // Updating Invulnerability
-            Invulnerability.Update();
+            // Updating features
+            UpdateFeatures();
         }
 
         private static List<IFeature> GetAllFeatures()
@@ -60,6 +64,22 @@ namespace DebugMod.Features
 
             // Returning the list of features
             return visual;
+        }
+
+        private static void InitializeFeatures()
+        {
+            foreach (IFeature feature in features)
+            {
+                feature.Initialize();
+            }
+        }
+
+        private static void UpdateFeatures()
+        {
+            foreach (IFeature feature in features)
+            {
+                feature.Update();
+            }
         }
     }
 }
