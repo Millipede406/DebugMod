@@ -12,14 +12,17 @@ namespace DebugMod
 
         public override void OnInitializeMelon()
         {
-            base.OnInitializeMelon();
-
+            // Initializing singleton
             Instance = this;
 
+            // Loading preferences
             ModPreferences.LoadPreferences();
 
+            // Initializing GUI
             InitializeDebugGUI();
 
+            // Initializing features
+            Features.FeatureManager.Initialize();
         }
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
@@ -34,6 +37,9 @@ namespace DebugMod
             {
                 DebugMenu.IsActive = !DebugMenu.IsActive;
             }
+
+            // Updating all of the features
+            Features.FeatureManager.Update();
 
             // Random features that haven't been moved to different classes yet:
 
