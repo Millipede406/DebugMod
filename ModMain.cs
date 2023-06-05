@@ -10,68 +10,20 @@ namespace DebugMod
     {
         public static ModMain Instance;
 
+        #region Initialization
         public override void OnInitializeMelon()
         {
-            base.OnInitializeMelon();
-
+            // Initializing singleton
             Instance = this;
 
+            // Loading preferences
             ModPreferences.LoadPreferences();
 
+            // Initializing GUI
             InitializeDebugGUI();
 
-        }
-
-        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
-        {
-            LoggerInstance.Msg($"Loaded Scene: {sceneName} ({buildIndex})");
-        }
-
-        public override void MainUpdate()
-        {
-            // Toggles active state of DebugMenu when F6 is pressed
-            if (Input.GetKeyDown(KeyCode.F6))
-            {
-                DebugMenu.IsActive = !DebugMenu.IsActive;
-            }
-
-            // Random features that haven't been moved to different classes yet:
-
-            // Invulnerability
-            if (CheatsMenu.Invulnerability)
-            {
-                // Making both players invulnerable
-                PatchQuest.Player.P1.GrantImmunity(1f);
-                PatchQuest.Player.P2.GrantImmunity(1f);
-            }
-
-            // Infinite Stamina
-            if (CheatsMenu.InfiniteStamina)
-            {
-                // Setting stamina for both players to maximum possible value
-                PatchQuest.Player.P1.Stamina = int.MaxValue;
-                PatchQuest.Player.P2.Stamina = int.MaxValue;
-            }
-
-            // Fast Travel
-            if (CheatsMenu.FastTravel)
-            {
-                // Making both players enter the ballooning state, allowing them to fast travel.
-                PatchQuest.Player.P1.SetBallooning(true);
-                PatchQuest.Player.P2.SetBallooning(true);
-            }
-
-            // Disable Fog
-            if (VisualMenu.DisableFog)
-            {
-                // Disabling fog
-                DisableFog.Update();
-            }
-        }
-
-        public static void DebugLog(string msg)
-        {
-            Instance.LoggerInstance.Msg(msg);
+            // Initializing features
+            Features.FeatureManager.Initialize();
         }
 
         private void InitializeDebugGUI()
@@ -88,9 +40,25 @@ namespace DebugMod
 
             ISMSettingsMenu.InitializeMenu();
         }
+        #endregion
+
+        #region Update
+        public override void MainUpdate()
+        {
+            // Toggles active state of DebugMenu when F6 is pressed
+            if (Input.GetKeyDown(KeyCode.F6))
+            {
+                DebugMenu.IsActive = !DebugMenu.IsActive;
+            }
+
+            // Updating all of the features
+            Features.FeatureManager.Update();
+        }
 
         public void GUI()
         {
+            // Drawing each menu
+
             if (!DebugMenu.IsActive)
                 return;
 
@@ -111,5 +79,6 @@ namespace DebugMod
                 ISMSettingsMenu.DrawMenu();
             }
         }
+        #endregion
     }
 }

@@ -64,10 +64,10 @@ namespace DebugMod.Features.Visual.ISM
 
             foreach (UnityEngine.Object obj in Resources.FindObjectsOfTypeAll(Il2CppType.Of<UnityEngine.GameObject>()))
             {
-                DebugConsole.Log($"checking if {obj.name} is a Shot");
+                MelonLoader.MelonLogger.Msg($"checking if {obj.name} is a Shot");
                 if (obj.name == "Shot")
                 {
-                    DebugConsole.Log($"{obj.name} is a Shot, changing visibility");
+                    MelonLoader.MelonLogger.Msg($"{obj.name} is a Shot, changing visibility");
                     if (hidden)
                     {
                         obj.Cast<GameObject>().GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);

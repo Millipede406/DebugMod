@@ -1,12 +1,21 @@
 ﻿using PatchQuest;
+using DebugMod.GUI;
 
 namespace DebugMod.Features.Visual
 {
-    public static class DisableFog
+    public class DisableFog : IFeature
     {
-        public static void Update()
+        public void Initialize()
         {
-            Darkness.Intensity = 0f;
+
+        }
+
+        public void Update()
+        {
+            if (VisualMenu.DisableFog)
+            {
+                Darkness.Intensity = 0f;
+            }
         }
     }
 }

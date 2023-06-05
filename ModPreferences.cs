@@ -70,7 +70,7 @@ namespace DebugMod
         /// </summary>
         static void LogPreferences()
         {
-            DebugConsole.Log("Loaded preferences:");
+            //DebugConsole.Log("Loaded preferences");
         }
         #endregion
     }
