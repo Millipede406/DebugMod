@@ -45,8 +45,8 @@ namespace DebugMod
                 PatchQuest.Player.P2.GrantImmunity(1f);
             }
 
-            // Infinite Damage
-            if (CheatsMenu.InfiniteDamage)
+            // Infinite Stamina
+            if (CheatsMenu.InfiniteStamina)
             {
                 // Setting stamina for both players to maximum possible value
                 PatchQuest.Player.P1.Stamina = int.MaxValue;
