@@ -7,9 +7,14 @@ using DebugMod.GUI;
 
 namespace DebugMod.Features.Cheats
 {
-    public static class InfiniteStamina
+    public class InfiniteStamina : IFeature
     {
-        public static void Update()
+        public void Initialize()
+        {
+            // No initialization code is necessary
+        }
+
+        public void Update()
         {
             if (CheatsMenu.InfiniteStamina)
             {
