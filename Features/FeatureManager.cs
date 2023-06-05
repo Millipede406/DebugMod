@@ -74,7 +74,7 @@ namespace DebugMod.Features
             List<IFeature> visual = new List<IFeature>();
 
             // Creating instance of features
-            // (there is nothing here yet)
+            visual.Add(new DisableFog());
 
             // Returning the list of features
             return visual;
