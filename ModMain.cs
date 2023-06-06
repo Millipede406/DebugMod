@@ -71,7 +71,7 @@ namespace DebugMod
             }
 
             // Toggles active state of DebugMenu when F6 is pressed
-            if (Input.GetKeyDown(KeyCode.F6))
+            if (Input.GetKeyDown(ModPreferences.preferences_main_guiHotkey))
             {
                 Console.LogType l = Console.LogType.Main;
 
