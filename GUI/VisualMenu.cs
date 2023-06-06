@@ -53,7 +53,7 @@ namespace DebugMod.GUI
         }
         private static void ImprovedScreenshotModeButton()
         {
-            string text = "Improved Screenshot Mode";
+            string text = "ISM";
             string t = text + (ImprovedScreenshotMode ? " [On]" : " [Off]");
 
             if (UnityEngine.GUI.Button(rects[1], t))
