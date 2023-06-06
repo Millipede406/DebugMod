@@ -82,11 +82,21 @@ namespace DebugMod.GUI
                 // Button is not pressed
             }
         }
+        private static void UtilityMenuButton()
+        {
+            string[] text = { "Hide Utility Menu", "Show Utility Menu" };
+            string t = VisualMenu.IsActive ? text[0] : text[1];
+
+            if(UnityEngine.GUI.Button(rects[3], t))
+            {
+                UtilityMenu.IsActive = !UtilityMenu.IsActive;
+            }
+        }
         private static void ToggleInfoText()
         {
             string text = "Press F6 to Enable / Disable this menu";
 
-            UnityEngine.GUI.Label(rects[3], text);
+            UnityEngine.GUI.Label(rects[4], text);
         }
     }
 }
