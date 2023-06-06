@@ -16,10 +16,10 @@ namespace DebugMod.GUI
         private static Rect[] rects =
         {
             // Window rect
-            new Rect(0, 0, 0, 0),
+            new Rect(1240, 0, 300, 60),
 
             // Force Show Cursor
-            new Rect(0, 0, 0, 0)
+            new Rect(10, 30, 280, 20)
         };
 
         private static Rect windowRect;
