@@ -11,8 +11,9 @@ namespace DebugMod
             Init_GUI,
             Init_Features,
 
-            // Probably other things will go here
-
+            // Main
+            Main,
+            Feature,
         }
 
         /// <summary>
@@ -38,12 +39,21 @@ namespace DebugMod
                 {
                     default:
                         return "[???] ";
+
                     case LogType.Init_Main:
                         return InitMain();
+
                     case LogType.Init_GUI:
                         return InitGUI();
+
                     case LogType.Init_Features:
                         return InitFeatures();
+
+                    case LogType.Main:
+                        return Main();
+
+                    case LogType.Feature:
+                        return Feature();
                 }
             }
             private static string InitMain()
@@ -59,6 +69,16 @@ namespace DebugMod
             private static string InitFeatures()
             {
                 return "[Init] [Features]";
+            }
+
+            private static string Main()
+            {
+                return "[Main]";
+            }
+
+            private static string Feature()
+            {
+                return "[Features]";
             }
         }
     }
