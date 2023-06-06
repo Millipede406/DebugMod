@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DebugMod.Features.Cheats;
 using DebugMod.Features.Visual;
+using DebugMod.Features.Utility;
 
 namespace DebugMod.Features
 {
@@ -54,6 +55,8 @@ namespace DebugMod.Features
 
             f.AddRange(GetAllVisual());
 
+            f.AddRange(GetAllUtility());
+
             // Returning result
             return f;
         }
@@ -82,6 +85,18 @@ namespace DebugMod.Features
 
             // Returning the list of features
             return visual;
+        }
+
+        private static List<IFeature> GetAllUtility()
+        {
+            // Initializing list
+            List<IFeature> utility = new List<IFeature>();
+
+            // Creating instances of features
+            utility.Add(new ForceShowCursor());
+
+            // Returning the list of features
+            return utility;
         }
 
         private static void InitializeFeatures()
