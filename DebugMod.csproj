@@ -45,9 +45,6 @@
     <Reference Include="MelonLoader">
       <HintPath>A:\Program Files v2\Steam_Moment\steamapps\common\Patch Quest\MelonLoader\MelonLoader.dll</HintPath>
     </Reference>
-    <Reference Include="ModdingUtilities">
-      <HintPath>A:\Program Files v2\Steam_Moment\steamapps\common\Patch Quest\Mods\ModdingUtilities.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

@@ -1,12 +1,11 @@
 ﻿using DebugMod.Features.Visual;
 using DebugMod.GUI;
 using MelonLoader;
-using ModdingUtilities;
 using UnityEngine;
 
 namespace DebugMod
 {
-    public class ModMain : PatchQuestMod
+    public class ModMain : MelonMod
     {
         public static ModMain Instance;
 
@@ -43,8 +42,15 @@ namespace DebugMod
         #endregion
 
         #region Update
-        public override void MainUpdate()
+        public void Update()
         {
+            if(PatchQuest.Game.State != PatchQuest.GameState.NONE)
+            {
+                // We don't want to run any of the features while not ingame, because it can cause problems
+                // So instead we just return out if we are not ingame
+                return;
+            }
+
             // Toggles active state of DebugMenu when F6 is pressed
             if (Input.GetKeyDown(KeyCode.F6))
             {
