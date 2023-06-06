@@ -92,7 +92,9 @@
     <Compile Include="Features\Cheats\ShinyChancePatch.cs" />
     <Compile Include="Features\FeatureManager.cs" />
     <Compile Include="Features\IFeature.cs" />
+    <Compile Include="Features\Utility\ForceShowCursor.cs" />
     <Compile Include="GUI\CheatsMenu.cs" />
+    <Compile Include="GUI\UtilityMenu.cs" />
     <Compile Include="GUI\DebugMenu.cs" />
     <Compile Include="Features\Visual\DisableFog.cs" />
     <Compile Include="Features\Visual\ISM\ImprovedScreenshotMode.cs" />
