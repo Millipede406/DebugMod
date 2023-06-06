@@ -1,12 +1,11 @@
 ﻿using DebugMod.Features.Visual;
 using DebugMod.GUI;
 using MelonLoader;
-using ModdingUtilities;
 using UnityEngine;
 
 namespace DebugMod
 {
-    public class ModMain : PatchQuestMod
+    public class ModMain : MelonMod
     {
         public static ModMain Instance;
 
