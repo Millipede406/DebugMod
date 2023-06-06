@@ -41,14 +41,21 @@ namespace DebugMod
             Console.Log(l, "Subscribing GUI");
             MelonEvents.OnGUI.Subscribe(GUI, 100);
 
+            Console.Log(l, "Initializing Menus");
             // Initializing individual menus
+            Console.Log(l, "Initializing DebugMenu");
             DebugMenu.InitializeMenu();
 
+            Console.Log(l, "Initializing CheatsMenu");
             CheatsMenu.InitializeMenu();
 
+            Console.Log(l, "Initializing VisualMenu");
             VisualMenu.InitializeMenu();
 
+            Console.Log(l, "Initializing ISMSettingsMenu");
             ISMSettingsMenu.InitializeMenu();
+
+            Console.Log(l, "GUI Initialization Complete!");
         }
         #endregion
 
