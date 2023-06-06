@@ -62,6 +62,10 @@ namespace DebugMod
         #region Update
         public override void OnUpdate()
         {
+            if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                return;
+            }
 
             if(PatchQuest.Game.State != PatchQuest.GameState.NONE)
             {
