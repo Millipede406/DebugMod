@@ -27,10 +27,14 @@ namespace DebugMod.Features
 
         public static void Initialize()
         {
+            Console.LogType l = Console.LogType.Init_Features;
+
             // Initializing FeatureManager
+            Console.Log(l, "Getting Features...");
             features = GetAllFeatures();
 
             // Initializing features
+            Console.Log(l, "Initializing Features...");
             InitializeFeatures();
         }
 
@@ -82,8 +86,11 @@ namespace DebugMod.Features
 
         private static void InitializeFeatures()
         {
+            Console.LogType l = Console.LogType.Init_Features;
+
             foreach (IFeature feature in features)
             {
+                Console.Log(l, $"Initializing {feature.GetType().Name}");
                 feature.Initialize();
             }
         }

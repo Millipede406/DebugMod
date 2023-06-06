@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Console.cs" />
     <Compile Include="Features\Cheats\FastTravel.cs" />
     <Compile Include="Features\Cheats\InfiniteStamina.cs" />
     <Compile Include="Features\Cheats\Invulnerability.cs" />

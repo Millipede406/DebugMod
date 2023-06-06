@@ -77,6 +77,11 @@ namespace DebugMod.GUI
             string text = "Fast Travel";
 
             FastTravel = UnityEngine.GUI.Button(rects[1], text);
+
+            if (FastTravel)
+            {
+                Console.Log(Console.LogType.Feature, "Fast Travelling");
+            }
         }
 
         private static void InfiniteDamageButton()
