@@ -11,7 +11,13 @@ namespace DebugMod.Features.Utility
 
         public void Update()
         {
+            if (!UtilityMenu.ForceShowCursor)
+            {
+                return;
+            }
 
+            UnityEngine.Cursor.visible = true;
+            UnityEngine.Screen.lockCursor = false;
         }
     }
 }
