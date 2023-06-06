@@ -35,7 +35,10 @@ namespace DebugMod
 
         private void InitializeDebugGUI()
         {
+            Console.LogType l = Console.LogType.Init_GUI;
+
             // Making the DebugGUI method recieve GUI updates
+            Console.Log(l, "Subscribing GUI");
             MelonEvents.OnGUI.Subscribe(GUI, 100);
 
             // Initializing individual menus
