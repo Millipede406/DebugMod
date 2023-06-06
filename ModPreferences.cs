@@ -1,4 +1,5 @@
 ﻿using MelonLoader;
+using UnityEngine;
 
 namespace DebugMod
 {
@@ -12,6 +13,9 @@ namespace DebugMod
 
 
         static MelonPreferences_Category _preferences_main;
+        static MelonPreferences_Entry<KeyCode> _preferences_main_guiHotkey;
+
+        public static KeyCode preferences_main_guiHotkey;
 
 
         public static void LoadPreferences()
@@ -45,7 +49,7 @@ namespace DebugMod
 
         static void SetupMainCategory()
         {
-
+            _preferences_main_guiHotkey = _preferences_main.CreateEntry<KeyCode>("guiHotkey", KeyCode.F6, "GUI Hotkey", "The button that is used to activate the DebugMenu");
         }
         #endregion
         #region Storage
@@ -60,7 +64,7 @@ namespace DebugMod
 
         static void StoreMainPreferences()
         {
-
+            preferences_main_guiHotkey = _preferences_main_guiHotkey.Value;
         }
 
         #endregion
