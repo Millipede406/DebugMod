@@ -18,16 +18,16 @@ namespace DebugMod
             // Initializing singleton
             Instance = this;
 
-            Console.Log(l, "Loading preferences...");
             // Loading preferences
+            Console.Log(l, "Loading preferences...");
             ModPreferences.LoadPreferences();
 
-            Console.Log(l, "Initializing GUI...");
             // Initializing GUI
+            Console.Log(l, "Initializing GUI...");
             InitializeDebugGUI();
 
-            Console.Log(l, "Initializing Features...");
             // Initializing features
+            Console.Log(l, "Initializing Features...");
             Features.FeatureManager.Initialize();
 
             Console.Log(l, "Initialization Complete!");
