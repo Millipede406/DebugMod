@@ -44,6 +44,8 @@ namespace DebugMod.GUI
 
             VisualMenuButton();
 
+            UtilityMenuButton();
+
             ToggleInfoText();
 
 
