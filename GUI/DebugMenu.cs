@@ -11,16 +11,19 @@ namespace DebugMod.GUI
         private static Rect[] rects =
         {
             // Background
-            new Rect(0, 0, 300, 105),
+            new Rect(0, 0, 300, 135),
 
             // Cheats Menu button
             new Rect(10, 30, 280, 20),
 
-            // Tools Menu button
+            // Visual Menu button
             new Rect(10, 55, 280, 20),
 
+            // Utility Menu button
+            new Rect(10, 80, 280, 20),
+
             // Toggle Info text
-            new Rect(10, 80, 280, 20)
+            new Rect(10, 105, 280, 20)
         };
         private static Rect windowRect;
 
@@ -39,7 +42,9 @@ namespace DebugMod.GUI
 
             CheatsMenuButton();
 
-            ToolsMenuButton();
+            VisualMenuButton();
+
+            UtilityMenuButton();
 
             ToggleInfoText();
 
@@ -63,7 +68,7 @@ namespace DebugMod.GUI
                 // Button is not pressed
             }
         }
-        private static void ToolsMenuButton()
+        private static void VisualMenuButton()
         {
             string[] text = { "Hide Visual Menu", "Show Visual Menu" };
             string t = VisualMenu.IsActive ? text[0] : text[1];
@@ -79,11 +84,21 @@ namespace DebugMod.GUI
                 // Button is not pressed
             }
         }
+        private static void UtilityMenuButton()
+        {
+            string[] text = { "Hide Utility Menu", "Show Utility Menu" };
+            string t = UtilityMenu.IsActive ? text[0] : text[1];
+
+            if(UnityEngine.GUI.Button(rects[3], t))
+            {
+                UtilityMenu.IsActive = !UtilityMenu.IsActive;
+            }
+        }
         private static void ToggleInfoText()
         {
             string text = "Press F6 to Enable / Disable this menu";
 
-            UnityEngine.GUI.Label(rects[3], text);
+            UnityEngine.GUI.Label(rects[4], text);
         }
     }
 }

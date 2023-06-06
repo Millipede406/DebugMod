@@ -55,21 +55,17 @@ namespace DebugMod
             Console.Log(l, "Initializing ISMSettingsMenu");
             ISMSettingsMenu.InitializeMenu();
 
+            Console.Log(l, "Initializing UtilityMenu");
+            UtilityMenu.InitializeMenu();
+
+
             Console.Log(l, "GUI Initialization Complete!");
         }
         #endregion
 
         #region Update
-        public void Update()
+        public override void OnUpdate()
         {
-
-            if(PatchQuest.Game.State != PatchQuest.GameState.NONE)
-            {
-                // We don't want to run any of the features while not ingame, because it can cause problems
-                // So instead we just return out if we are not ingame
-                return;
-            }
-
             // Toggles active state of DebugMenu when F6 is pressed
             if (Input.GetKeyDown(KeyCode.F6))
             {
@@ -78,6 +74,20 @@ namespace DebugMod
                 DebugMenu.IsActive = !DebugMenu.IsActive;
 
                 Console.Log(l, DebugMenu.IsActive ? "Showing Debug Menu" : "Hid Debug Menu");
+            }
+
+            if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                // We don't want to run any of the following code if we are in the bootScene
+                // Because the game will start crying like a little baby if we do
+                return;
+            }
+
+            if (!PatchQuest.Game.InMainGame)
+            {
+                // We don't want to run any of the features while not ingame, because it can cause problems
+                // So instead we just return out if we are not ingame
+                return;
             }
 
             // Updating all of the features
@@ -106,6 +116,11 @@ namespace DebugMod
             if (ISMSettingsMenu.IsActive)
             {
                 ISMSettingsMenu.DrawMenu();
+            }
+
+            if (UtilityMenu.IsActive)
+            {
+                UtilityMenu.DrawMenu();
             }
         }
         #endregion
