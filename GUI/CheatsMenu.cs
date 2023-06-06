@@ -81,8 +81,8 @@ namespace DebugMod.GUI
 
         private static void InfiniteDamageButton()
         {
-            string[] text = { "Disable Infinite Damage", "Enable Infinite Damage" };
-            string t = InfiniteDamage ? text[0] : text[1];
+            string text = "Infinite Damage";
+            string t = text + (InfiniteDamage ? " [On]" : " [Off]");
 
             if (UnityEngine.GUI.Button(rects[2], t))
             {
@@ -91,8 +91,8 @@ namespace DebugMod.GUI
         }
         private static void InfiniteStaminaButton()
         {
-            string[] text = { "Disable Infinite Stamina", "Enable Infinite Stamina" };
-            string t = InfiniteStamina ? text[0] : text[1];
+            string text = "Infinite Stamina";
+            string t = text + (InfiniteStamina ? " [On]" : " [Off]");
 
             if (UnityEngine.GUI.Button(rects[3], t))
             {
@@ -101,8 +101,8 @@ namespace DebugMod.GUI
         }
         private static void InvulerabilityButton()
         {
-            string[] text = { "Disable Invulnerability", "Enable Invulnerability" };
-            string t = Invulnerability ? text[0] : text[1];
+            string text = "Invulnerability";
+            string t = text + (Invulnerability ? " [On]" : " [Off]");
 
             if (UnityEngine.GUI.Button(rects[4], t))
             {
@@ -111,8 +111,8 @@ namespace DebugMod.GUI
         }
         private static void NoCooldownsButton()
         {
-            string[] text = { "Enable Cooldowns", "Disable Cooldowns" };
-            string t = NoCooldowns ? text[0] : text[1];
+            string text = "No Cooldowns";
+            string t = text + (NoCooldowns ? " [On]" : " [Off]");
 
             if (UnityEngine.GUI.Button(rects[5], t))
             {
@@ -121,8 +121,8 @@ namespace DebugMod.GUI
         }
         private static void ShinyModeButton()
         {
-            string[] text = { "Disable Shiny Mode", "Enable Shiny Mode" };
-            string t = ShinyMode ? text[0] : text[1];
+            string text = "Shiny Mode";
+            string t = text + (ShinyMode ? " [On]" : " [Off]"); 
 
             if (UnityEngine.GUI.Button(rects[6], t))
             {

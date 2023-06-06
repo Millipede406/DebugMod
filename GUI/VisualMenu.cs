@@ -53,8 +53,8 @@ namespace DebugMod.GUI
         }
         private static void ImprovedScreenshotModeButton()
         {
-            string[] text = { "Disable ISM", "Enable ISM" };
-            string t = ImprovedScreenshotMode ? text[0] : text[1];
+            string text = "ISM";
+            string t = text + (ImprovedScreenshotMode ? " [On]" : " [Off]");
 
             if (UnityEngine.GUI.Button(rects[1], t))
             {
@@ -81,8 +81,8 @@ namespace DebugMod.GUI
         }
         private static void DisableFogButton()
         {
-            string[] text = { "Enable Fog", "Disable Fog" };
-            string t = DisableFog ? text[0] : text[1];
+            string text = "Disable Fog";
+            string t = text + (DisableFog ? " [On]" : " [Off]");
 
             if (UnityEngine.GUI.Button(rects[3], t))
             {
