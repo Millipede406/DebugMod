@@ -42,7 +42,7 @@ namespace DebugMod.GUI
 
             CheatsMenuButton();
 
-            ToolsMenuButton();
+            VisualMenuButton();
 
             ToggleInfoText();
 
@@ -66,7 +66,7 @@ namespace DebugMod.GUI
                 // Button is not pressed
             }
         }
-        private static void ToolsMenuButton()
+        private static void VisualMenuButton()
         {
             string[] text = { "Hide Visual Menu", "Show Visual Menu" };
             string t = VisualMenu.IsActive ? text[0] : text[1];
