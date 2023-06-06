@@ -87,7 +87,7 @@ namespace DebugMod.GUI
         private static void UtilityMenuButton()
         {
             string[] text = { "Hide Utility Menu", "Show Utility Menu" };
-            string t = VisualMenu.IsActive ? text[0] : text[1];
+            string t = UtilityMenu.IsActive ? text[0] : text[1];
 
             if(UnityEngine.GUI.Button(rects[3], t))
             {
