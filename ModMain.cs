@@ -12,17 +12,25 @@ namespace DebugMod
         #region Initialization
         public override void OnInitializeMelon()
         {
+            Console.LogType l = Console.LogType.Init_Main;
+            Console.Log(l, "Initializing...");
+
             // Initializing singleton
             Instance = this;
 
+            Console.Log(l, "Loading preferences...");
             // Loading preferences
             ModPreferences.LoadPreferences();
 
+            Console.Log(l, "Initializing GUI...");
             // Initializing GUI
             InitializeDebugGUI();
 
+            Console.Log(l, "Initializing Features...");
             // Initializing features
             Features.FeatureManager.Initialize();
+
+            Console.Log(l, "Initialization Complete!");
         }
 
         private void InitializeDebugGUI()
