@@ -37,8 +37,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.2.0.0")]
 [assembly: AssemblyFileVersion("1.2.0.0")]
 
-[assembly: MelonInfo(typeof(ModMain), "Debug Mod", "1.2.0-pre1", "Millimedia Games")]
+[assembly: MelonInfo(typeof(ModMain), "Debug Mod", "1.2.0", "Millimedia Games")]
 [assembly: MelonColor(ConsoleColor.Green)]
 [assembly: MelonAuthorColor(ConsoleColor.Magenta)]
-[assembly: MelonAdditionalDependencies("ModdingUtilities")]
 [assembly: MelonGame("Lychee Game Labs", "Patch Quest")]
