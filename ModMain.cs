@@ -60,7 +60,7 @@ namespace DebugMod
         #endregion
 
         #region Update
-        public void Update()
+        public override void OnUpdate()
         {
 
             if(PatchQuest.Game.State != PatchQuest.GameState.NONE)
