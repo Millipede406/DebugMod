@@ -64,16 +64,8 @@ namespace DebugMod
         #endregion
 
         #region Update
-        public void Update()
+        public override void OnUpdate()
         {
-
-            if(!PatchQuest.Game.InMainGame)
-            {
-                // We don't want to run any of the features while not ingame, because it can cause problems
-                // So instead we just return out if we are not ingame
-                return;
-            }
-
             // Toggles active state of DebugMenu when F6 is pressed
             if (Input.GetKeyDown(KeyCode.F6))
             {
@@ -82,6 +74,14 @@ namespace DebugMod
                 DebugMenu.IsActive = !DebugMenu.IsActive;
 
                 Console.Log(l, DebugMenu.IsActive ? "Showing Debug Menu" : "Hid Debug Menu");
+            }
+
+            if (!PatchQuest.Game.InMainGame)
+            {
+                // We don't want to run any of the features while not ingame, because it can cause problems
+                // So instead we just return out if we are not ingame
+                Console.Log(Console.LogType.Main, "Not in main game, returning");
+                return;
             }
 
             // Updating all of the features
