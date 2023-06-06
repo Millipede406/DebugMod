@@ -55,6 +55,10 @@ namespace DebugMod
             Console.Log(l, "Initializing ISMSettingsMenu");
             ISMSettingsMenu.InitializeMenu();
 
+            Console.Log(l, "Initializing UtilityMenu");
+            UtilityMenu.InitializeMenu();
+
+
             Console.Log(l, "GUI Initialization Complete!");
         }
         #endregion
@@ -106,6 +110,11 @@ namespace DebugMod
             if (ISMSettingsMenu.IsActive)
             {
                 ISMSettingsMenu.DrawMenu();
+            }
+
+            if (UtilityMenu.IsActive)
+            {
+                UtilityMenu.DrawMenu();
             }
         }
         #endregion
