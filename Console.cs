@@ -34,7 +34,31 @@ namespace DebugMod
         {
             public static string GetPrefix(LogType l)
             {
+                switch (l)
+                {
+                    default:
+                        return "[???] ";
+                    case LogType.Init_Main:
+                        return InitMain();
+                    case LogType.Init_GUI:
+                        return InitGUI();
+                    case LogType.Init_Features:
+                        return InitFeatures();
+                }
+            }
+            private static string InitMain()
+            {
+                return "[Init]";
+            }
 
+            private static string InitGUI()
+            {
+                return "[Init] [GUI]";
+            }
+
+            private static string InitFeatures()
+            {
+                return "[Init] [Features]";
             }
         }
     }
