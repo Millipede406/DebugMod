@@ -62,6 +62,7 @@ namespace DebugMod
         #region Update
         public void Update()
         {
+
             if(PatchQuest.Game.State != PatchQuest.GameState.NONE)
             {
                 // We don't want to run any of the features while not ingame, because it can cause problems
@@ -72,7 +73,11 @@ namespace DebugMod
             // Toggles active state of DebugMenu when F6 is pressed
             if (Input.GetKeyDown(KeyCode.F6))
             {
+                Console.LogType l = Console.LogType.Main;
+
                 DebugMenu.IsActive = !DebugMenu.IsActive;
+
+                Console.Log(l, DebugMenu.IsActive ? "Showing Debug Menu" : "Hid Debug Menu");
             }
 
             // Updating all of the features
