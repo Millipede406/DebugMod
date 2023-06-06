@@ -67,7 +67,7 @@ namespace DebugMod
         public void Update()
         {
 
-            if(PatchQuest.Game.State != PatchQuest.GameState.NONE)
+            if(!PatchQuest.Game.InMainGame)
             {
                 // We don't want to run any of the features while not ingame, because it can cause problems
                 // So instead we just return out if we are not ingame
