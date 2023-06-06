@@ -76,11 +76,17 @@ namespace DebugMod
                 Console.Log(l, DebugMenu.IsActive ? "Showing Debug Menu" : "Hid Debug Menu");
             }
 
+            if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                // We don't want to run any of the following code if we are in the bootScene
+                // Because the game will start crying like a little baby if we do
+                return;
+            }
+
             if (!PatchQuest.Game.InMainGame)
             {
                 // We don't want to run any of the features while not ingame, because it can cause problems
                 // So instead we just return out if we are not ingame
-                Console.Log(Console.LogType.Main, "Not in main game, returning");
                 return;
             }
 
