@@ -8,6 +8,6 @@ namespace DebugMod.GUI
 {
     public static class UtilityMenu
     {
-
+        public const int WINDOW_ID = 4;
     }
 }
