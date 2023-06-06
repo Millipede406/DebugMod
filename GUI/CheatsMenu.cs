@@ -92,8 +92,6 @@ namespace DebugMod.GUI
             if (UnityEngine.GUI.Button(rects[2], t))
             {
                 InfiniteDamage = !InfiniteDamage;
-
-                Console.Log(Console.LogType.Feature, InfiniteDamage ? "Enabled Infinite Damage" : "Disabled Infinite Damage");
             }
         }
         private static void InfiniteStaminaButton()
@@ -104,8 +102,6 @@ namespace DebugMod.GUI
             if (UnityEngine.GUI.Button(rects[3], t))
             {
                 InfiniteStamina = !InfiniteStamina;
-
-                Console.Log(Console.LogType.Feature, InfiniteStamina ? "Enabled Infinite Stamina" : "Disabled Infinite Stamina");
             }
         }
         private static void InvulerabilityButton()
@@ -116,8 +112,6 @@ namespace DebugMod.GUI
             if (UnityEngine.GUI.Button(rects[4], t))
             {
                 Invulnerability = !Invulnerability;
-
-                Console.Log(Console.LogType.Feature, Invulnerability ? "Enabled Invulnerability" : "Disabled Invulnerability");
             }
         }
         private static void NoCooldownsButton()
@@ -128,8 +122,6 @@ namespace DebugMod.GUI
             if (UnityEngine.GUI.Button(rects[5], t))
             {
                 NoCooldowns = !NoCooldowns;
-
-                Console.Log(Console.LogType.Feature, NoCooldowns ? "Enabled No Cooldowns" : "Disabled No Cooldowns");
             }
         }
         private static void ShinyModeButton()
@@ -140,8 +132,6 @@ namespace DebugMod.GUI
             if (UnityEngine.GUI.Button(rects[6], t))
             {
                 ShinyMode = !ShinyMode;
-
-                Console.Log(Console.LogType.Feature, ShinyMode ? "Enabled Shiny Mode" : "Disabled Shiny Mode");
             }
         }
     }
