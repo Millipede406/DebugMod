@@ -49,7 +49,13 @@ namespace DebugMod.GUI
 
         private static void ForceShowCursorButton()
         {
+            string text = "Force Show Cursor";
+            string t = text + (ForceShowCursor ? " [ON]" : " [OFF]");
 
+            if(UnityEngine.GUI.Button(rects[0], t))
+            {
+                ForceShowCursor = !ForceShowCursor;
+            }
         }
     }
 }
